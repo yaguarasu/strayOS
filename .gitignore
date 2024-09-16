@@ -1,0 +1,7 @@
+# pre-compiled less
+less/
+# gem
+Gemfile
+Gemfile.lock
+# jekyll
+_site/
