@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 9" width="8" height="9">
+	<title>restore</title>
+	<style>
+		.s0 { fill: #86b7ad } 
+	</style>
+	<path class="s0" d="m2 0h6v2h-6z"/>
+	<path class="s0" d="m7 2h1v4h-1z"/>
+	<path class="s0" d="m2 2h1v1h-1z"/>
+	<path class="s0" d="m6 5h1v1h-1z"/>
+	<path class="s0" d="m0 3h6v2h-6z"/>
+	<path class="s0" d="m5 5h1v4h-1z"/>
+	<path class="s0" d="m0 5h1v4h-1z"/>
+	<path class="s0" d="m1 8h4v1h-4z"/>
+</svg>

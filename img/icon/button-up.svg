@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" width="16" height="17">
+	<title>button-up</title>
+	<style>
+		.s0 { fill: #3d076d } 
+		.s1 { fill: #571c9a } 
+		.s2 { fill: #120816 } 
+		.s3 { fill: #230e33 } 
+		.s4 { fill: #361655 } 
+		.s5 { fill: #86b7ad } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m15 0h-15v1 15h1v-15h14z"/>
+	<path fill-rule="evenodd" class="s1" d="m2 1h-1v14h1v-13h12v-1z"/>
+	<path fill-rule="evenodd" class="s2" d="m16 17h-1-15v-1h15v-16h1z"/>
+	<path fill-rule="evenodd" class="s3" d="m15 1h-1v14h-13v1h13 1z"/>
+	<path class="s4" d="m2 2h12v13h-12z"/>
+	<path fill-rule="evenodd" class="s5" d="m8 6h-1v1h-1v1h-1v1h-1v1h7v-1h-1v-1h-1v-1h-1z"/>
+</svg>

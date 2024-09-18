@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21" width="11" height="21">
+	<title>indicator-rectangle-horizontal-svg</title>
+	<style>
+		.s0 { fill: #aae3d0 } 
+		.s1 { fill: #63d6aa } 
+		.s2 { fill: #30c090 } 
+		.s3 { fill: #148370 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m0 0v20h1v-19h9v-1z"/>
+	<path class="s1" d="m1 1h8v18h-8z"/>
+	<path fill-rule="evenodd" class="s2" d="m9 1h1v19h-9v-1h8z"/>
+	<path fill-rule="evenodd" class="s3" d="m10 0h1v21h-11v-1h10z"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" width="6" height="9">
+	<title>help</title>
+	<style>
+		.s0 { fill: #86b7ad } 
+	</style>
+	<path class="s0" d="m0 1h2v2h-2z"/>
+	<path class="s0" d="m1 0h4v1h-4z"/>
+	<path class="s0" d="m4 1h2v2h-2z"/>
+	<path class="s0" d="m3 3h2v1h-2z"/>
+	<path class="s0" d="m2 4h2v2h-2z"/>
+	<path class="s0" d="m2 7h2v2h-2z"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" width="16" height="17">
+	<title>button-down-active</title>
+	<style>
+		.s0 { fill: #230e33 } 
+		.s1 { fill: #361655 } 
+		.s2 { fill: #ae89b7 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m0 0h16v17h-16zm1 16h14v-15h-14z"/>
+	<path class="s1" d="m1 1h14v15h-14z"/>
+	<path fill-rule="evenodd" class="s2" d="m12 7h-7v1h1v1h1v1h1v1h1v-1h1v-1h1v-1h1z"/>
+</svg>

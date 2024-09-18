@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2" width="2" height="2">
+	<title>scrollbar-background</title>
+	<style>
+		.s0 { fill: #148370 } 
+		.s1 { fill: #30c090 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m1 0h-1v1h1v1h1v-1h-1z"/>
+	<path fill-rule="evenodd" class="s1" d="m2 0h-1v1h-1v1h1v-1h1z"/>
+</svg>
