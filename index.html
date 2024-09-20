@@ -24,23 +24,80 @@
         </div>
         <div class="window-body">
           <p>
-            a good portion of this websites functionality will depend on javascript. so, if you don't have that enabled, things <i>will likely</i> break.
+            a good portion of this websites functionality will depend on javascript. so, if you don't have that enabled, things <i>will likely</i> break. will also likely be broken on old browsers, don't know though.
           </p>
           <p>
             the site will likely not be responsive for some time. making this responsive is currently not a priority.
           </p>
+          <hr>
           <p>
-            some pages <i>may contain</i> <u>flashing content</u>. enter at your own risk. in the future, we <i>may</i> add indicators for when a page will contain flashing content, but that will not be a focus until the site is more built up.
+            some pages <u><i>may contain</i> flashing content</u>. enter at your own risk. in the future, we <i>may</i> add indicators for when a page will contain flashing content, but that will not be a focus until the site is more built up.
           </p>
         </div>
       </div>
-      <div id="taskbar">
-        <button id="taskbar-start">
+      <div class="window" id="banner1">
+        <div class="title-bar inactive">
+          <div class="title-bar-text">
+            clandestine.gif
+          </div>
+          <div class="title-bar-controls">
+            <button aria-label="Help"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <img src="/img/banners/static-screens.gif">
+        </div>
+      </div>
+      <section id="taskbar">
+        <button id="taskbar-start" onclick="showMenu();">
           <div>
-            <div class="strayOS-i"><img src="/img/logo/strayOS.svg"></div>
-            <div>start</div>
+            <div class="strayOS-i"><img src="/img/logo/strayOS.png"></div>
+            <div><div>
+              start
+            </div></div>
           </div>
         </button>
+      </section>
+      <aside id="menu-cn" class="window">
+        <section id="menu">
+          <div id="menu-title">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                strayOS
+              </div>
+            </div>
+          </div>
+          <div id="menu-content-cn">
+            <div id="menu-content">
+              <div>
+                To be edited...!
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            understood?
+          </div>
+        </div>
+        <div class="window-body">
+          <div>
+            <button>
+              understood.
+            </button>
+          </div>
+          <div class="status-bar">
+            <div class="status-bar-field">
+              if not, simply turn back.
+            </div>
+            <div class="status-bar-field">
+              GPU: 43%
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/global.js"></script>

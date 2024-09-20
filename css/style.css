@@ -125,6 +125,12 @@ body > div.contain {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+#caution,
+.caution {
+  width: 450px;
+  translate: 0 -20px;
 }
 #taskbar {
   position: absolute;
@@ -142,10 +148,11 @@ body > div.contain {
 }
 #taskbar-start {
   height: 100%;
-  font-size: 1.2em;
+  font-size: 1.75em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: left;
+  padding: 3px 7px;
 }
 #taskbar-start:focus {
   outline: none;
@@ -154,26 +161,111 @@ body > div.contain {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  vertical-align: middle;
-  width: 100px;
+  width: 90px;
 }
 #taskbar-start > div .strayOS-i {
-  height: 100%;
+  height: 75%;
   width: min-content;
-  margin: 2px;
+  margin: 3px;
+  margin-right: 8px;
 }
 #taskbar-start > div .strayOS-i > img {
-  height: 80%;
+  height: 100%;
   width: auto;
   margin: 0 auto;
 }
 #taskbar-start > div .strayOS-i + div {
   height: 100%;
   width: min-content;
+  display: flex;
+  align-items: center;
 }
 #taskbar-start:active {
-  translate: 2px 2px;
+  translate: 4px 4px;
+}
+#banner1 {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: -1;
+  top: 105px;
+  right: 315px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+#banner1 img {
+  width: 300px;
+  height: auto;
+}
+#banner1 .window-body {
+  padding: 5px;
+}
+#menu-cn {
+  position: absolute;
+  left: 10px;
+  width: 250px;
+  height: 365px;
+  bottom: -150%;
+  transition: 0.5s;
+  z-index: -1;
+}
+#menu-cn.menu-open,
+#menu-cn .menu-open {
+  bottom: 55px!important;
+  transition: 0.5s;
+}
+#menu-cn #menu {
+  height: 365px;
+  padding: 1px;
+}
+#menu-cn #menu #menu-title {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 357px;
+  transform: rotateZ(-90deg);
+  transform-origin: 0 0;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  translate: 0 26px;
+}
+#menu-cn #menu #menu-title .title-bar {
+  height: 30px;
+  width: 100%;
+  background: linear-gradient(45deg, #30c090, #148370, #30c090);
+  align-items: center;
+  justify-content: unset;
+  /*div {
+          text-orientation: sideways;
+        }*/
+}
+#menu-cn #menu #menu-title .title-bar-text {
+  font-size: 1.7em;
+  font-family: "Kiwi Soda";
+}
+#menu-cn #menu #menu-content-cn {
+  width: 250px;
+  display: flex;
+  flex-flow: row;
+  justify-content: right;
+}
+#menu-cn #menu #menu-content-cn #menu-content {
+  width: 220px;
+  padding: 2px;
+  display: flex;
+  flex-flow: column;
+}
+hr {
+  border-color: #148370;
+  width: 75%;
+}
+p {
+  line-height: 15px;
+}
+u {
+  text-decoration-color: #ae89b7;
+  text-underline-offset: 3px;
 }
 /*-------------------------------------------------------
  * credits to 98.css for base win98-like code.
@@ -220,10 +312,6 @@ h4 {
 }
 th {
   color: #86b7ad;
-}
-u {
-  text-decoration: 1px dashed #ae89b7;
-  text-underline-offset: 20px;
 }
 fieldset {
   border-image: url("/img/icon/groupbox-border.svg") 2;
@@ -277,10 +365,6 @@ pre {
   background-color: #3d006b;
   box-shadow: inset -1px -1px #120816, inset 1px 1px #4b1687, inset -2px -2px #230e33, inset 2px 2px #3d006b;
 }
-#caution,
-.caution {
-  width: 500px;
-}
 /*----------------------------------------
  * grouped elements & classes.
  * -------------------------------------*/
@@ -299,7 +383,7 @@ li[role="tab"] {
 }
 p,
 .window-body {
-  font-size: 9.25px;
+  font-size: 9.4px;
 }
 ::selection,
 ::-moz-selection {
@@ -450,7 +534,7 @@ code * {
   align-items: center;
 }
 .title-bar.inactive {
-  background: linear-gradient(90deg, #99b1b5, #b3d6c0);
+  background: linear-gradient(90deg, #829598, #9bb6a5);
 }
 .title-bar-text {
   color: #24043d;

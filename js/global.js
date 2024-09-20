@@ -61,5 +61,22 @@ function changeTabs(e) {
     .removeAttribute("hidden");
 }
 function crt() {
-  document.body.classList.toggle('crt')
+  document.body.classList.toggle('crt');
+}
+// for the menu
+const pcbootSFX = new Audio("/audio/sfx/pkmn_pc-boot.wav");
+const pccloseSFX = new Audio("/audio/sfx/pkmn_pc-close.wav");
+let menubtn = document.getElementById("taskbar-start");
+let menu = document.getElementById("menu-cn");
+
+function showMenu() {
+  let menuHasRole = menu.classList.contains("menu-open");
+  let btnHasRole = menubtn.classList.contains("menu-open");
+  
+  let bothHaveRole = btnHasRole && menuHasRole;
+  let condition = bothHaveRole || btnHasRole || menuHasRole;
+
+  let targetSFX = (condition) ? pccloseSFX : pcbootSFX;
+  targetSFX.play();
+  menu.classList.toggle("menu-open");
 }
