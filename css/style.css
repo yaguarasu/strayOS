@@ -1,51 +1,51 @@
 @font-face {
   font-family: "Alkhemikal";
-  src: url(../fonts/Alkhemikal.ttf);
+  src: url(/fonts/Alkhemikal.ttf);
 }
 @font-face {
   font-family: "Awfully Digital";
-  src: url(../fonts/AwfullyDigital.ttf);
+  src: url(/fonts/AwfullyDigital.ttf);
 }
 @font-face {
   font-family: "Dogica Pixel";
-  src: url(../fonts/dogicapixel.ttf);
+  src: url(/fonts/dogicapixel.ttf);
 }
 @font-face {
   font-family: "Dogica Pixel Bold";
-  src: url(../fonts/dogicapixelbold.ttf);
+  src: url(/fonts/dogicapixelbold.ttf);
   font-weight: bold;
 }
 @font-face {
   font-family: "Enchanted Sword";
-  src: url(../fonts/EnchantedSword.ttf);
+  src: url(/fonts/EnchantedSword.ttf);
 }
 @font-face {
   font-family: "Kiwi Soda";
-  src: url(../fonts/KiwiSoda.ttf);
+  src: url(/fonts/KiwiSoda.ttf);
 }
 @font-face {
   font-family: "Modern DOS 8x8";
-  src: url(../fonts/ModernDOS8x8.ttf);
+  src: url(/fonts/ModernDOS8x8.ttf);
 }
 @font-face {
   font-family: "Modern DOS 8x14";
-  src: url(../fonts/ModernDOS8x14.ttf);
+  src: url(/fonts/ModernDOS8x14.ttf);
 }
 @font-face {
   font-family: "Modern DOS 8x16";
-  src: url(../fonts/ModernDOS8x16.ttf);
+  src: url(/fonts/ModernDOS8x16.ttf);
 }
 @font-face {
   font-family: "Modern DOS 9x14";
-  src: url(../fonts/ModernDOS9x14.ttf);
+  src: url(/fonts/ModernDOS9x14.ttf);
 }
 @font-face {
   font-family: "Modern DOS 9x16";
-  src: url(../fonts/ModernDOS9x16.ttf);
+  src: url(/fonts/ModernDOS9x16.ttf);
 }
 @font-face {
   font-family: "Pixellari";
-  src: url(../fonts/Pixellari.ttf);
+  src: url(/fonts/Pixellari.ttf);
 }
 .alkhemikal {
   font-family: "Alkhemikal";
