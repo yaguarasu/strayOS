@@ -1,82 +1,183 @@
-window.addEventListener("DOMContentLoaded", () => {
-  // Only handle one particular tablist; if you have multiple tab
-  // lists (might even be nested), you have to apply this code for each one
-  const tabList = document.querySelector('[role="tablist"]');
-  const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
-
-  // Add a click event handler to each tab
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", changeTabs);
-  });
-
-  // Enable arrow navigation between tabs in the tab list
-  let tabFocus = 0;
-
-  tabList.addEventListener("keydown", (e) => {
-    // Move right
-    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-      tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.key === "ArrowRight") {
-        tabFocus++;
-        // If we're at the end, go to the start
-        if (tabFocus >= tabs.length) {
-          tabFocus = 0;
-        }
-        // Move left
-      } else if (e.key === "ArrowLeft") {
-        tabFocus--;
-        // If we're at the start, move to the end
-        if (tabFocus < 0) {
-          tabFocus = tabs.length - 1;
-        }
-      }
-
-      tabs[tabFocus].setAttribute("tabindex", 0);
-      tabs[tabFocus].focus();
-    }
-  });
-});
-
-function changeTabs(e) {
-  const targetTab = e.target;
-  const tabList = targetTab.parentNode;
-  const tabGroup = tabList.parentNode;
-
-  // Remove all current selected tabs
-  tabList
-    .querySelectorAll(':scope > [aria-selected="true"]')
-    .forEach((t) => t.setAttribute("aria-selected", false));
-
-  // Set this tab as selected
-  targetTab.setAttribute("aria-selected", true);
-
-  // Hide all tab panels
-  tabGroup
-    .querySelectorAll(':scope > [role="tabpanel"]')
-    .forEach((p) => p.setAttribute("hidden", true));
-
-  // Show the selected panel
-  tabGroup
-    .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
-    .removeAttribute("hidden");
-}
 function crt() {
   document.body.classList.toggle('crt');
 }
-// for the menu
-const pcbootSFX = new Audio("/audio/sfx/pkmn_pc-boot.wav");
-const pccloseSFX = new Audio("/audio/sfx/pkmn_pc-close.wav");
+// --------- AUDIO!
+const confirmSFX = new Audio("/audio/sfx/pkmn_confirm.wav");
+const pcConfirmSFX = new Audio("/audio/sfx/pkmn_pc-confirm.wav");
+const pcBootSFX = new Audio("/audio/sfx/pkmn_pc-boot.wav");
+const pcCloseSFX = new Audio("/audio/sfx/pkmn_pc-close.wav");
+
+// way too loud otherwise...
+  confirmSFX.volume = 0.3;
+  pcConfirmSFX.volume = 0.3;
+  pcBootSFX.volume = 0.3;
+  pcCloseSFX.volume = 0.3;
+
+// know what element(s) to play on
+const needConfirmSFX = document.querySelectorAll(".sfx-ok");
+const needPCConfirmSFX = document.querySelectorAll(".sfx-ok-pc");
+const needPCBootSFX = document.querySelectorAll(".sfx-boot-pc");
+const needPCCloseSFX = document.querySelectorAll(".sfx-close-pc");
+
+const playConfirmSFX = function () { confirmSFX.play(); }
+const playPCConfirmSFX = function () { pcConfirmSFX.play(); }
+const playPCBootSFX = function () { pcBootSFX.play(); }
+const playPCCloseSFX = function () { pcCloseSFX.play(); }
+
+// play sound effect on its respective element on click
+// make sure it plays for all elements with the class
+needConfirmSFX.forEach((needed) => {
+  needed.addEventListener("click", playConfirmSFX);
+});
+needPCConfirmSFX.forEach((needed) => {
+  needed.addEventListener("click", playPCConfirmSFX);
+});
+
+//needPCBootSFX.addEventListener("click", playPCBootSFX);
+//needPCCloseSFX.addEventListener("click", playPCCloseSFX);
+
+// --------- START MENU!
+// get the menu button
 let menubtn = document.getElementById("taskbar-start");
+// get the menu
 let menu = document.getElementById("menu-cn");
 
-function showMenu() {
+menubtn.onclick = function() {
+  // close any open submenu
+  closeSubMenu();
+  // so we can check if menu is already open
   let menuHasRole = menu.classList.contains("menu-open");
-  let btnHasRole = menubtn.classList.contains("menu-open");
-  
-  let bothHaveRole = btnHasRole && menuHasRole;
-  let condition = bothHaveRole || btnHasRole || menuHasRole;
+  let condition = menuHasRole;
+  // figure out which sound to play
+  let targetSFX = (condition) ? pcCloseSFX : pcBootSFX;
 
-  let targetSFX = (condition) ? pccloseSFX : pcbootSFX;
-  targetSFX.play();
-  menu.classList.toggle("menu-open");
+  if (condition == true) {
+    setTimeout(closeProxySFX, 80);
+    setTimeout(closeProxy, 200);
+  } else if (condition == false) {
+    openProxy();
+  }
+
+  function openProxy() {
+    targetSFX.play();
+    menu.classList.toggle("menu-open");
+  }
+  function closeProxySFX() {
+    targetSFX.play();
+  }
+  function closeProxy() {
+    menu.classList.toggle("menu-open");
+  }
+
+}
+function closeSubMenu() {
+  subMenuBtn[0].classList.remove("active");
+  subMenuBtn[1].classList.remove("active");
+  subMenuBtn[2].classList.remove("active");
+}
+// sort submenu buttons into arrays
+let subMenuBtn = []; let smb;
+subMenuBtn[0] = document.getElementById("systemBIOS");
+subMenuBtn[1] = document.getElementById("entries");
+subMenuBtn[2] = document.getElementById("resources");
+// sort submenus into arrays
+let subMenu = []; let sm;
+subMenu[0] = document.getElementById("submenu_systemBIOS");
+subMenu[1] = document.getElementById("submenu_entries");
+subMenu[2] = document.getElementById("submenu_resources");
+// set our current index position after clicking a submenu button
+subMenuBtn[0].addEventListener("click", smb0);
+subMenuBtn[1].addEventListener("click", smb1);
+subMenuBtn[2].addEventListener("click", smb2);
+
+function smb0() {
+  // index zero
+  smb = 0;
+  openSM();
+}
+function smb1() {
+  // index one
+  smb = 1;
+  openSM();
+}
+function smb2() {
+  // index two
+  smb = 2;
+  openSM();
+}
+
+function openSM(btn) {
+  btn = subMenuBtn[smb];
+  // check if current submenu is active
+  let status = btn.classList.contains("active");
+  // check if other submenus are active
+  let status0 = subMenuBtn[0].classList.contains("active");
+  let status1 = subMenuBtn[1].classList.contains("active");
+  let status2 = subMenuBtn[2].classList.contains("active");
+
+  if (smb == 0) {
+    sm = smb;
+    // if either of the other two submenus are active, deactivate them
+    if (status1 || status2) {
+      subMenuBtn[1].classList.remove("active");
+      subMenuBtn[2].classList.remove("active");
+    }
+    // current submenu controls
+    currentSM();
+    // if 'status' upon clicking becomes true, slide out the respective submenu;
+    // if it becomes false, slide it back in
+    if (status.onclick == true) {
+      subMenu[0].style.left = 205 + "px";
+      subMenu[0].style.transition = .5 + "s";
+    } else if (status.onclick == false) {
+      subMenu[0].style.left = -40 + "px";
+      subMenu[0].style.transition = .5 + "s";
+    }
+  } else if (smb == 1) {
+    sm = smb;
+    // if either of the other two submenus are active, deactivate them
+    if (status0 || status2) {
+      subMenuBtn[0].classList.remove("active");
+      subMenuBtn[2].classList.remove("active");
+    }
+    // current submenu controls
+    currentSM();
+    // if 'status' upon clicking becomes true, slide out the respective submenu;
+    // if it becomes false, slide it back in
+    if (status.onclick == true) {
+      subMenu[1].style.left = 205 + "px";
+      subMenu[1].style.transition = .5 + "s";
+    } else if (status.onclick == false) {
+      subMenu[1].style.left = -40 + "px";
+      subMenu[1].style.transition = .5 + "s";
+    }
+  } else {
+    sm = smb;
+    // if either of the other two submenus are active, deactivate them
+    if (status0 || status1) {
+      subMenuBtn[0].classList.remove("active");
+      subMenuBtn[1].classList.remove("active");
+    }
+    // current submenu controls
+    currentSM();
+    // if 'status' upon clicking becomes true, slide out the respective submenu;
+    // if it becomes false, slide it back in
+    if (status.onclick == true) {
+      subMenu[2].style.left = 205 + "px";
+      subMenu[2].style.transition = .5 + "s";
+    } else if (status.onclick == false) {
+      subMenu[2].style.left = -40 + "px";
+      subMenu[2].style.transition = .5 + "s";
+    }
+  }
+  // if current submenu is active, deactivate it;
+  // if it isn't, activate it
+  function currentSM(btn) {
+    btn = subMenuBtn[smb];
+    if (status == true) {
+      btn.classList.remove("active");
+    } else if (status == false) {
+      btn.classList.add("active");
+    }
+  }
 }

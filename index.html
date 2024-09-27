@@ -5,57 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>RUNNING: strayOS</title>
-    <link rel="icon" type="image/x-icon" href="/img/logo/strayOS.ico">
-		<link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/logo/strayOS.png">
+		<link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/preloader.js"></script>
 	</head>
-	<body class="crt"></body>
+	<body class="crt">
     <div id="bg2"></div>
+
+    <div id="preloader">
+      <div class="loader_line"></div>
+    </div>
+
     <div class="contain">
-      <div class="window caution" id="caution">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            CAUTiON BEFORE ENTERiNG!
-          </div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-          <p>
-            a good portion of this websites functionality will depend on javascript. so, if you don't have that enabled, things <i>will likely</i> break. will also likely be broken on old browsers, don't know though.
-          </p>
-          <p>
-            the site will likely not be responsive for some time. making this responsive is currently not a priority.
-          </p>
-          <hr>
-          <p>
-            some pages <u><i>may contain</i> flashing content</u>. enter at your own risk. in the future, we <i>may</i> add indicators for when a page will contain flashing content, but that will not be a focus until the site is more built up.
-          </p>
-        </div>
-      </div>
-      <div class="window" id="banner1">
-        <div class="title-bar inactive">
-          <div class="title-bar-text">
-            clandestine.gif
-          </div>
-          <div class="title-bar-controls">
-            <button aria-label="Help"></button>
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-          <img src="/img/banners/static-screens.gif">
-        </div>
-      </div>
       <section id="taskbar">
-        <button id="taskbar-start" onclick="showMenu();">
+        <button id="taskbar-start">
           <div>
             <div class="strayOS-i"><img src="/img/logo/strayOS.png"></div>
-            <div><div>
+            <div><label>
               start
-            </div></div>
+            </label></div>
           </div>
         </button>
       </section>
@@ -70,34 +38,237 @@
           </div>
           <div id="menu-content-cn">
             <div id="menu-content">
-              <div>
-                To be edited...!
+              <div class="start-entry sfx-ok-pc" id="systemBIOS">
+                <div class="start-entry-main">
+                  <div class="start-entry-icon">
+                    <img src="/img/logo/strayOS_update.png">
+                  </div>
+                  <div class="start-entry-text">
+                    System BIOS
+                  </div>
+                </div>
+                <div id="submenu_systemBIOS" class="start-entry-more-cn window">
+                  <a class="start-entry-more sfx-ok" href="/bios/">
+                    <div class="start-entry-more-icon">
+                      <img src="/img/logo/strayOS_hardware-1.png">
+                    </div>
+                    <div>
+                      Hardware
+                    </div>
+                  </a>
+                  <a class="start-entry-more sfx-ok" href="/bios/components">
+                    <div class="start-entry-more-icon">
+                      <img src="/img/logo/strayOS_chip-ramdrive-1.png">
+                    </div>
+                    <div>
+                      Components
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="start-entry sfx-ok-pc" id="entries">
+                <div class="start-entry-main">
+                  <div class="start-entry-icon">
+                    <img src="/img/logo/strayOS_notepad-1.png">
+                  </div>
+                  <div class="start-entry-text">
+                    Entries
+                  </div>
+                </div>
+                <div id="submenu_entries" class="start-entry-more-cn window">
+                  <a class="start-entry-more sfx-ok" href="/logs/journals">
+                    <div class="start-entry-more-icon">
+                      <img>
+                    </div>
+                    <div>
+                      Journals
+                    </div>
+                  </a>
+                  <a class="start-entry-more sfx-ok" href="/logs/quotes">
+                    <div class="start-entry-more-icon">
+                      <img>
+                    </div>
+                    <div>
+                      Quotes
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <hr>
+              <div class="start-entry sfx-ok-pc" id="resources">
+                <div class="start-entry-main">
+                  <div class="start-entry-icon">
+                    <img src="/img/logo/strayOS_directory-1.png">
+                  </div>
+                  <div class="start-entry-text">
+                    Resources
+                  </div>
+                </div>
+                <div id="submenu_resources" class="start-entry-more-cn window">
+                  <a class="start-entry-more sfx-ok" href="/">
+                    <div class="start-entry-more-icon">
+                      <img>
+                    </div>
+                    <div>
+                      Resources
+                    </div>
+                  </a>
+                  <div class="start-entry-more sfx-ok" href="/">
+                    <div class="start-entry-more-icon">
+                      <img>
+                    </div>
+                    <div>
+                      Credits
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="copy">
+                <div class="status-bar">
+                  <div class="status-bar-field">
+                    ♡2024 by strayOS.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </aside>
-      <div class="window">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            understood?
-          </div>
-        </div>
-        <div class="window-body">
-          <div>
-            <button>
-              understood.
-            </button>
-          </div>
-          <div class="status-bar">
-            <div class="status-bar-field">
-              if not, simply turn back.
+<!--  PAGE START  -->
+      <div class="main-wrapper">
+        <main class="shift">
+            <div class="window" id="caution">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+                  CAUTiON!
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
             </div>
-            <div class="status-bar-field">
-              GPU: 43%
+            <div class="window-body">
+              <p>
+                this operating system <u><i>may contain</i></u> assets with <u>flashing content</u>. enter at one's own risk. in the future, indicators may be added to show that links will redirect to areas containing this flashing content; however, that will not be a focus for the time being, nor will it be one until the foundations of this operating system are built up.
+              </p>
             </div>
           </div>
-        </div>
+          <div class="window" id="notice">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+                  NOTiCE!
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window-body">
+              <p>
+                much of this operating system's functionality is likely to depend on javascript. if one does not have this enabled, functionality <i>will</i> break. it is unknown if this operating system is incompatible with any browers, however, it likely will not operate properly on old versions of internet explorer.
+              </p>
+              <p>
+                the design is built on a machine with a display of 13.3"x7.5" dimmensions and 1920x1080 resolution, thus machines nearer to this will have the best experience. alas, mobile devices and tablets may suffer due to responsiveness not yet having been implemented.
+              </p>
+            </div>
+          </div>
+            <div class="banner window" id="static-gif">
+              <div class="window-head">
+                <div class="title-bar">
+                  <div class="title-bar-text">
+
+                  </div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="window-body">
+                <img src="/img/banners/static-screens.gif">
+              </div>
+            </div>
+          <div class="banner window" id="discretion-png">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window-body">
+              <img src="/img/banners/discretion.png">
+            </div>
+          </div>
+          <div class="banner window" id="broken-screen-png">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window-body">
+              <img src="/img/banners/broken-screen.png">
+            </div>
+          </div>
+          <div class="window" id="entry">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+                  do you accept?
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window-body">
+              <section class="btns">
+                <a href="/home/">
+                  <button class="sfx-ok">
+                    <label>
+                      i accept.
+                    </label>
+                  </button>
+                </a>
+                <a onclick="history.back();">
+                  <button class="sfx-ok">
+                    <label>
+                      i do not.
+                    </label>
+                  </button>
+                </a>
+                
+              </section>
+              <div class="status-bar">
+                <div class="status-bar-field">
+                  TOTAL ViRUSES: 11
+                </div>
+                <div class="status-bar-field">
+                  OS VERSiON: 3.33
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
     <script src="/js/global.js"></script>

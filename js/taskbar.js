@@ -1,0 +1,152 @@
+
+const taskBarTemplate = document.createElement('template');
+
+taskBarTemplate.innerHTML = `<link rel="stylesheet" href="css/style.css" />
+<section id="taskbar">
+    <button id="taskbar-start">
+      <div>
+        <div class="strayOS-i"><img src="/img/logo/strayOS.png"></div>
+        <div><label>
+          start
+        </label></div>
+      </div>
+    </button>
+  </section>`;
+
+class TaskBar extends HTMLElement {
+  constructor() {
+    // apparently important to call first
+    super();
+  }
+    connectedCallback() {
+      const shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot.appendChild(taskBarTemplate.content);
+  }
+}
+
+customElements.define('task-bar', TaskBar);
+
+
+const menuBarTemplate = document.createElement('template');
+    
+menuBarTemplate.innerHTML = `<link rel="stylesheet" href="css/style.css" />
+  <aside id="menu-cn" class="window">
+    <section id="menu">
+      <div id="menu-title">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            strayOS
+          </div>
+        </div>
+      </div>
+    <div id="menu-content-cn">
+        <div id="menu-content">
+          <div class="start-entry sfx-ok-pc" id="systemBIOS">
+            <div class="start-entry-main">
+              <div class="start-entry-icon">
+                <img src="/img/logo/strayOS_update.png">
+              </div>
+              <div class="start-entry-text">
+                System BIOS
+              </div>
+            </div>
+            <div id="submenu_systemBIOS" class="start-entry-more-cn window">
+              <a class="start-entry-more sfx-ok" href="/bios/">
+                <div class="start-entry-more-icon">
+                  <img src="/img/logo/strayOS_hardware-1.png">
+                </div>
+                <div>
+                  Hardware
+                </div>
+              </a>
+              <a class="start-entry-more sfx-ok" href="/bios/components">
+                <div class="start-entry-more-icon">
+                  <img src="/img/logo/strayOS_chip-ramdrive-1.png">
+                </div>
+                <div>
+                  Components
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="start-entry sfx-ok-pc" id="entries">
+            <div class="start-entry-main">
+              <div class="start-entry-icon">
+                <img src="/img/logo/strayOS_notepad-1.png">
+              </div>
+              <div class="start-entry-text">
+                Entries
+              </div>
+            </div>
+            <div id="submenu_entries" class="start-entry-more-cn window">
+              <a class="start-entry-more sfx-ok" href="/logs/journals">
+                <div class="start-entry-more-icon">
+                  <img>
+                </div>
+                <div>
+                  Journals
+                </div>
+              </a>
+              <a class="start-entry-more sfx-ok" href="/logs/quotes">
+                <div class="start-entry-more-icon">
+                  <img>
+                </div>
+                <div>
+                  Quotes
+                </div>
+              </a>
+            </div>
+          </div>
+          <hr>
+          <div class="start-entry sfx-ok-pc" id="resources">
+            <div class="start-entry-main">
+              <div class="start-entry-icon">
+                <img src="/img/logo/strayOS_directory-1.png">
+              </div>
+              <div class="start-entry-text">
+                Resources
+              </div>
+            </div>
+            <div id="submenu_resources" class="start-entry-more-cn window">
+              <a class="start-entry-more sfx-ok" href="/">
+                <div class="start-entry-more-icon">
+                  <img>
+                </div>
+                <div>
+                  Resources
+                </div>
+              </a>
+              <div class="start-entry-more sfx-ok" href="/">
+                <div class="start-entry-more-icon">
+                  <img>
+                </div>
+                <div>
+                  Credits
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="copy">
+            <div class="status-bar">
+              <div class="status-bar-field">
+                ♡2024 by strayOS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>`;
+
+class MenuBar extends HTMLElement {
+  constructor() {
+    // apparently important to call first
+    super();
+  }
+    connectedCallback() {
+      const shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot.appendChild(menuBarTemplate.content);
+  }
+}
+
+customElements.define('menu-bar', MenuBar);
