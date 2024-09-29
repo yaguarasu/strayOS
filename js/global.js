@@ -2,27 +2,31 @@ function crt() {
   document.body.classList.toggle('crt');
 }
 // --------- AUDIO!
-const confirmSFX = new Audio("/audio/sfx/pkmn_confirm.wav");
-const pcConfirmSFX = new Audio("/audio/sfx/pkmn_pc-confirm.wav");
-const pcBootSFX = new Audio("/audio/sfx/pkmn_pc-boot.wav");
-const pcCloseSFX = new Audio("/audio/sfx/pkmn_pc-close.wav");
+const confirmSFX = new Audio("/assets/audio/sfx/pkmn_confirm.wav");
+const pcConfirmSFX = new Audio("/assets/audio/sfx/pkmn_pc-confirm.wav");
+const pcBootSFX = new Audio("/assets/audio/sfx/pkmn_pc-boot.wav");
+const pcCloseSFX = new Audio("/assets/audio/sfx/pkmn_pc-close.wav");
+const pcDeniedSFX = new Audio("/assets/audio/sfx/pkmn_denied.wav");
 
 // way too loud otherwise...
   confirmSFX.volume = 0.3;
   pcConfirmSFX.volume = 0.3;
   pcBootSFX.volume = 0.3;
   pcCloseSFX.volume = 0.3;
+  pcDeniedSFX.volume = 0.3;
 
 // know what element(s) to play on
 const needConfirmSFX = document.querySelectorAll(".sfx-ok");
 const needPCConfirmSFX = document.querySelectorAll(".sfx-ok-pc");
 const needPCBootSFX = document.querySelectorAll(".sfx-boot-pc");
 const needPCCloseSFX = document.querySelectorAll(".sfx-close-pc");
+const needPCDeniedSFX = document.querySelectorAll(".sfx-access-denied");
 
 const playConfirmSFX = function () { confirmSFX.play(); }
 const playPCConfirmSFX = function () { pcConfirmSFX.play(); }
 const playPCBootSFX = function () { pcBootSFX.play(); }
 const playPCCloseSFX = function () { pcCloseSFX.play(); }
+const playPCDeniedSFX = function () { pcDeniedSFX.play(); }
 
 // play sound effect on its respective element on click
 // make sure it plays for all elements with the class
@@ -32,7 +36,9 @@ needConfirmSFX.forEach((needed) => {
 needPCConfirmSFX.forEach((needed) => {
   needed.addEventListener("click", playPCConfirmSFX);
 });
-
+needPCDeniedSFX.forEach((needed) => {
+  needed.addEventListener("click", playPCDeniedSFX);
+});
 //needPCBootSFX.addEventListener("click", playPCBootSFX);
 //needPCCloseSFX.addEventListener("click", playPCCloseSFX);
 
@@ -44,7 +50,9 @@ let menu = document.getElementById("menu-cn");
 
 menubtn.onclick = function() {
   // close any open submenu
-  closeSubMenu();
+  if (menu.classList.contains("discretion-page" == false)) {
+    closeSubMenu();
+  }
   // so we can check if menu is already open
   let menuHasRole = menu.classList.contains("menu-open");
   let condition = menuHasRole;
@@ -78,13 +86,13 @@ function closeSubMenu() {
 // sort submenu buttons into arrays
 let subMenuBtn = []; let smb;
 subMenuBtn[0] = document.getElementById("systemBIOS");
-subMenuBtn[1] = document.getElementById("entries");
-subMenuBtn[2] = document.getElementById("resources");
+subMenuBtn[1] = document.getElementById("logs");
+subMenuBtn[2] = document.getElementById("repositories");
 // sort submenus into arrays
 let subMenu = []; let sm;
 subMenu[0] = document.getElementById("submenu_systemBIOS");
-subMenu[1] = document.getElementById("submenu_entries");
-subMenu[2] = document.getElementById("submenu_resources");
+subMenu[1] = document.getElementById("submenu_logs");
+subMenu[2] = document.getElementById("submenu_repositories");
 // set our current index position after clicking a submenu button
 subMenuBtn[0].addEventListener("click", smb0);
 subMenuBtn[1].addEventListener("click", smb1);

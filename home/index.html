@@ -1,32 +1,34 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>RUNNING: strayOS</title>
-    <link rel="icon" type="image/x-icon" href="/img/logo/strayOS.png">
-		<link rel="stylesheet" href="/css/style.css" />
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/icons/stray-OS.png">
+		<link rel="stylesheet" href="/css/style.css">
     <script src="/js/preloader.js"></script>
 	</head>
 	<body class="crt">
     <div id="bg2"></div>
+
     <div id="preloader">
       <div class="loader_line"></div>
     </div>
+
     <div class="contain">
-      <section id="taskbar">
-        <button id="taskbar-start">
-          <div>
-            <div class="strayOS-i"><img src="/img/logo/strayOS.png"></div>
-            <div><label>
-              start
-            </label></div>
-          </div>
+      <div id="taskbar">
+        <button id="taskbar-start" type="button">
+          <span class="strayOS-i">
+            <img src="/assets/img/icons/stray-OS.png" alt="">
+          </span>
+          <span>
+            start
+          </span>
         </button>
-      </section>
+      </div>
       <aside id="menu-cn" class="window">
-        <section id="menu">
+        <div id="menu">
           <div id="menu-title">
             <div class="title-bar">
               <div class="title-bar-text">
@@ -39,7 +41,7 @@
               <div class="start-entry sfx-ok-pc" id="systemBIOS">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/img/logo/strayOS_update.png">
+                    <img src="/assets/img/icons/strayOS_update.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     System BIOS
@@ -48,7 +50,7 @@
                 <div id="submenu_systemBIOS" class="start-entry-more-cn window">
                   <a class="start-entry-more sfx-ok" href="/bios/">
                     <div class="start-entry-more-icon">
-                      <img src="/img/logo/strayOS_hardware-1.png">
+                      <img src="/assets/img/icons/strayOS_hardware-1.png" alt="">
                     </div>
                     <div>
                       Hardware
@@ -56,7 +58,7 @@
                   </a>
                   <a class="start-entry-more sfx-ok" href="/bios/components">
                     <div class="start-entry-more-icon">
-                      <img src="/img/logo/strayOS_chip-ramdrive-1.png">
+                      <img src="/assets/img/icons/strayOS_chip-ramdrive-1.png" alt="">
                     </div>
                     <div>
                       Components
@@ -64,63 +66,72 @@
                   </a>
                 </div>
               </div>
-              <div class="start-entry sfx-ok-pc" id="entries">
+              <div class="start-entry sfx-ok-pc" id="logs">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/img/logo/strayOS_notepad-1.png">
+                    <img src="/assets/img/icons/strayOS_notepad-1.png" alt="">
                   </div>
                   <div class="start-entry-text">
-                    Entries
+                    Log Entries
                   </div>
                 </div>
-                <div id="submenu_entries" class="start-entry-more-cn window">
-                  <a class="start-entry-more sfx-ok" href="/logs/journals">
+                <div id="submenu_logs" class="start-entry-more-cn window">
+                  <a class="start-entry-more sfx-ok" href="/blog">
                     <div class="start-entry-more-icon">
-                      <img>
+                      <img src="/" alt="">
                     </div>
                     <div>
-                      Journals
+                      Blog Posts
                     </div>
                   </a>
-                  <a class="start-entry-more sfx-ok" href="/logs/quotes">
+                  <a class="start-entry-more sfx-ok" href="/logs/journals">
                     <div class="start-entry-more-icon">
-                      <img>
+                      <img src="/" alt="">
                     </div>
                     <div>
-                      Quotes
+                      Personal Journals
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="start-entry sfx-ok-pc" id="repositories">
+                <div class="start-entry-main">
+                  <div class="start-entry-icon">
+                    <img src="/assets/img/icons/strayOS_directory-1.png" alt="">
+                  </div>
+                  <div class="start-entry-text">
+                    Repositories
+                  </div>
+                </div>
+                <div class="start-entry-more-cn window" id="submenu_repositories">
+                  <a class="start-entry-more sfx-ok" href="/repository/quotes">
+                    <div class="start-entry-more-icon">
+                      <img src="/" alt="">
+                    </div>
+                    <div>
+                      Quote Repository
+                    </div>
+                  </a>
+                  <a class="start-entry-more sfx-ok" href="/repository/resources">
+                    <div class="start-entry-more-icon">
+                      <img src="/" alt="">
+                    </div>
+                    <div>
+                      Resource Repository
                     </div>
                   </a>
                 </div>
               </div>
               <hr>
-              <div class="start-entry sfx-ok-pc" id="resources">
+              <a href="/attributions" class="start-entry sfx-ok-pc" id="#attributions">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/img/logo/strayOS_directory-1.png">
+                    <img src="/assets/img/icons/strayOS_directory-2.png" alt="">
                   </div>
-                  <div class="start-entry-text">
-                    Resources
-                  </div>
-                </div>
-                <div id="submenu_resources" class="start-entry-more-cn window">
-                  <a class="start-entry-more sfx-ok" href="/">
-                    <div class="start-entry-more-icon">
-                      <img>
-                    </div>
-                    <div>
-                      Resources
-                    </div>
-                  </a>
-                  <div class="start-entry-more sfx-ok" href="/">
-                    <div class="start-entry-more-icon">
-                      <img>
-                    </div>
-                    <div>
-                      Credits
-                    </div>
+                  <div class="start-entry-text">Attributions
                   </div>
                 </div>
-              </div>
+              </a>
               <div id="copy">
                 <div class="status-bar">
                   <div class="status-bar-field">
@@ -130,28 +141,34 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </aside>
+<!--  PAGE START  -->
       <div class="main-wrapper">
-        <main id="primary-page" class="window">
-          <section class="title-bar">
-            <div class="title-bar-text">
-              work in progress.
+        <main class="">
+          <div class="window" id="primary-page">
+            <div class="window-head">
+              <div class="title-bar">
+                <div class="title-bar-text">
+                  WiP!
+                </div>
+                <div class="title-bar-controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
             </div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+            <div class="window-body">
+              <p>
+                stand by.
+              </p>
             </div>
-          </section>
-          <section class="window-body">
-            <p>
-              please stand by.
-            </p>
-          </section>
+          </div>
         </main>
       </div>
     </div>
+    <script src="/js/taskbar.js"></script>
     <script src="/js/global.js"></script>
 	</body>
 </html>
