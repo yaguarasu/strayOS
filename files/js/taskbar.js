@@ -15,7 +15,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-access-denied">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_update.png" alt="">
+                    <img src="/files/icons/strayOS_update.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     System BIOS
@@ -25,7 +25,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-access-denied">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_notepad-1.png" alt="">
+                    <img src="/files/icons/strayOS_notepad-1.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Log Entries
@@ -35,7 +35,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-access-denied">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_directory-1.png" alt="">
+                    <img src="/files/icons/strayOS_directory-1.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Repositories
@@ -46,7 +46,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-access-denied">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_directory-2.png" alt="">
+                    <img src="/files/icons/strayOS_directory-2.png" alt="">
                   </div>
                   <div class="start-entry-text"">Attributions
                   </div>
@@ -77,7 +77,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-ok-pc" id="systemBIOS">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_update.png" alt="">
+                    <img src="/files/icons/strayOS_update.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     System BIOS
@@ -86,7 +86,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                 <div id="submenu_systemBIOS" class="start-entry-more-cn window">
                   <a class="start-entry-more sfx-ok" href="/bios/">
                     <div class="start-entry-more-icon">
-                      <img src="/assets/img/icons/strayOS_hardware-1.png" alt="">
+                      <img src="/files/icons/strayOS_hardware-1.png" alt="">
                     </div>
                     <div>
                       Hardware
@@ -94,7 +94,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   </a>
                   <a class="start-entry-more sfx-ok" href="/bios/components">
                     <div class="start-entry-more-icon">
-                      <img src="/assets/img/icons/strayOS_chip-ramdrive-1.png" alt="">
+                      <img src="/files/icons/strayOS_chip-ramdrive-1.png" alt="">
                     </div>
                     <div>
                       Components
@@ -105,7 +105,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-ok-pc" id="logs">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_notepad-1.png" alt="">
+                    <img src="/files/icons/strayOS_notepad-1.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Log Entries
@@ -133,7 +133,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-ok-pc" id="repositories">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_directory-1.png" alt="">
+                    <img src="/files/icons/strayOS_directory-1.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Repositories
@@ -162,7 +162,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <a id="attributions" href="/attributions" class="start-entry sfx-ok-pc">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/assets/img/icons/strayOS_directory-2.png" alt="">
+                    <img src="/files/icons/strayOS_directory-2.png" alt="">
                   </div>
                   <div class="start-entry-text">Attributions
                   </div>

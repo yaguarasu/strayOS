@@ -2,11 +2,11 @@ function crt() {
   document.body.classList.toggle('crt');
 }
 // --------- AUDIO!
-const confirmSFX = new Audio("/assets/audio/sfx/pkmn_confirm.wav");
-const pcConfirmSFX = new Audio("/assets/audio/sfx/pkmn_pc-confirm.wav");
-const pcBootSFX = new Audio("/assets/audio/sfx/pkmn_pc-boot.wav");
-const pcCloseSFX = new Audio("/assets/audio/sfx/pkmn_pc-close.wav");
-const pcDeniedSFX = new Audio("/assets/audio/sfx/pkmn_denied.wav");
+const confirmSFX = new Audio("/files/sfx/pkmn_confirm.wav");
+const pcConfirmSFX = new Audio("/files/sfx/pkmn_pc-confirm.wav");
+const pcBootSFX = new Audio("/files/sfx/pkmn_pc-boot.wav");
+const pcCloseSFX = new Audio("/files/sfx/pkmn_pc-close.wav");
+const pcDeniedSFX = new Audio("/files/sfx/pkmn_denied.wav");
 
 // way too loud otherwise...
   confirmSFX.volume = 0.3;

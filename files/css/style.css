@@ -68,101 +68,38 @@
 }
 @font-face {
   font-family: "Alkhemikal";
-  src: url(/fonts/Alkhemikal.ttf);
+  src: url(/files/fonts/Alkhemikal.ttf);
 }
 @font-face {
   font-family: "Awfully Digital";
-  src: url(/fonts/AwfullyDigital.ttf);
+  src: url(/files/fonts/AwfullyDigital.ttf);
 }
 @font-face {
   font-family: "Dogica Pixel";
-  src: url(/fonts/dogicapixel.ttf);
+  src: url(/files/fonts/dogicapixel.ttf);
 }
 @font-face {
   font-family: "Dogica Pixel Bold";
-  src: url(/fonts/dogicapixelbold.ttf);
+  src: url(/files/fonts/dogicapixelbold.ttf);
   font-weight: bold;
 }
 @font-face {
-  font-family: "Enchanted Sword";
-  src: url(/fonts/EnchantedSword.ttf);
-}
-@font-face {
   font-family: "Kiwi Soda";
-  src: url(/fonts/KiwiSoda.ttf);
-}
-@font-face {
-  font-family: "Modern DOS 8x8";
-  src: url(/fonts/ModernDOS8x8.ttf);
-}
-@font-face {
-  font-family: "Modern DOS 8x14";
-  src: url(/fonts/ModernDOS8x14.ttf);
+  src: url(/files/fonts/KiwiSoda.ttf);
 }
 @font-face {
   font-family: "Modern DOS 8x16";
-  src: url(/fonts/ModernDOS8x16.ttf);
-}
-@font-face {
-  font-family: "Modern DOS 9x14";
-  src: url(/fonts/ModernDOS9x14.ttf);
+  src: url(/files/fonts/ModernDOS8x16.ttf);
 }
 @font-face {
   font-family: "Modern DOS 9x16";
-  src: url(/fonts/ModernDOS9x16.ttf);
-}
-@font-face {
-  font-family: "Pixellari";
-  src: url(/fonts/Pixellari.ttf);
-}
-.alkhemikal {
-  font-family: "Alkhemikal";
-  font-size: 1.35em;
-}
-.awfullydigital {
-  font-family: "Awfully Digital";
-  font-size: 1.15em;
-}
-.dogicapixel {
-  font-family: "Dogica Pixel";
-}
-.dogicapixel b {
-  font-family: "Dogica Pixel Bold";
-}
-.enchantedsword {
-  font-family: "Enchanted Sword";
-  font-size: 1.65em;
-}
-.kiwisoda {
-  font-family: "Kiwi Soda";
-  font-size: 1.35em;
-}
-.modernDOS-8x8 {
-  font-family: "Modern DOS 8x8";
-  font-size: 1.35em;
-}
-.modernDOS-8x14 {
-  font-family: "Modern DOS 8x14";
-  font-size: 1.35em;
-}
-.modernDOS-8x16 {
-  font-family: "Modern DOS 8x16";
-  font-size: 1.35em;
-}
-.modernDOS-9x14 {
-  font-family: "Modern DOS 9x14";
-  font-size: 1.35em;
-}
-.modernDOS-9x16 {
-  font-family: "Modern DOS 9x16";
-  font-size: 1.35em;
-}
-.pixellari {
-  font-family: "Pixellari";
-  font-size: 1.35em;
+  src: url(/files/fonts/ModernDOS9x16.ttf);
 }
 * {
   box-sizing: border-box;
+}
+body {
+  cursor: url(/files/cursors/default.png), default;
 }
 #bg2 {
   position: absolute;
@@ -177,7 +114,7 @@
   /* pattern made by thebabydino
    * https://codepen.io/thebabydino/pen/dyoPdqj */
   height: calc(100vh - 1em);
-  background: linear-gradient(#0d031e, #3d1353), radial-gradient(closest-side, #0d031e, #3d1353) 0/1em 1em space;
+  background: linear-gradient(#0c031c, #3d1353), radial-gradient(closest-side, #0c031c, #3d1353) 0/1em 1em space;
   opacity: 0.25;
 }
 body > div.contain {
@@ -194,7 +131,7 @@ body > div.contain {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  cursor: default;
+  cursor: url(/files/cursors/default.png), default;
 }
 #caution {
   width: 300px;
@@ -239,7 +176,7 @@ body > div.contain {
   outline: none;
 }
 #taskbar-start:hover {
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
 }
 #taskbar-start > span.strayOS-i {
   height: 100%;
@@ -274,11 +211,18 @@ body > div.contain {
 .banner .window-body {
   padding: 5px;
 }
-#lipskull-png {
+#ilex-png {
+  top: 50px;
+  right: -100px;
+}
+#ilex-png img {
+  width: 250px;
+}
+#ryqz-png {
   top: -65px;
   left: 25px;
 }
-#lipskull-png img {
+#ryqz-png img {
   width: 200px;
   height: auto;
   image-rendering: smooth!important;
@@ -377,7 +321,7 @@ u {
   text-underline-offset: 3px;
 }
 button {
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
   font-size: 13px;
 }
 button > span {
@@ -386,7 +330,10 @@ button > span {
   text-shadow: none;
 }
 button > span:hover {
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
+}
+#not-found {
+  width: 300px;
 }
 #entry {
   width: 250px;
@@ -443,7 +390,10 @@ button > span:hover {
   left: 0;
 }
 .main-wrapper .shift {
-  translate: 115px 0;
+  translate: 115px -15px;
+}
+.main-wrapper .shift-nf {
+  translate: -75px -45px;
 }
 .start-entry {
   display: flex;
@@ -455,7 +405,7 @@ button > span:hover {
   align-items: center;
   font-family: "Modern DOS 9x16";
   position: relative;
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
 }
 .start-entry-main {
   display: inherit;
@@ -474,7 +424,7 @@ button > span:hover {
   height: inherit;
   padding: 3px 15px 2.5px 12.5px;
   margin: 1px;
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
   color: #33c69b;
   text-decoration: none;
 }
@@ -509,10 +459,10 @@ button > span:hover {
 }
 .start-entry:hover,
 .start-entry-more:hover {
-  background-color: #0d031e;
+  background-color: #0c031c;
 }
 .start-entry.active {
-  background-color: #0d031e;
+  background-color: #0c031c;
 }
 .start-entry.active > .start-entry-main + .start-entry-more-cn {
   transition: 0.5s;
@@ -549,7 +499,7 @@ button > span:hover {
   width: 50%;
   height: 100%;
   z-index: -1;
-  background-color: #0d031e;
+  background-color: #0c031c;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -644,8 +594,8 @@ body {
   font-family: "Dogica Pixel";
   font-size: 12px;
   color: #88b6ae;
-  background-color: #0d031e;
-  background-image: url(/assets/img/circuitboard.png);
+  background-color: #0c031c;
+  background-image: url(/files/circuitboard.png);
   background-repeat: no-repeat;
 }
 button,
@@ -672,7 +622,7 @@ th {
   color: #88b6ae;
 }
 fieldset {
-  border-image: url("/assets/img/98css/groupbox-border.svg") 2;
+  border-image: url("/files/98svg/groupbox-border.svg") 2;
   padding: calc(10px);
   padding-block-start: 8px;
   margin: 0;
@@ -717,7 +667,7 @@ pre {
   background: #410066;
 }
 ::-webkit-scrollbar-track {
-  background-image: url("/assets/img/98css/scrollbar-background.svg");
+  background-image: url("/files/98svg/scrollbar-background.svg");
 }
 ::-webkit-scrollbar-thumb {
   background-color: #410066;
@@ -745,7 +695,7 @@ p,
 ::selection,
 ::-moz-selection {
   color: #33c69b;
-  background-color: #0d031e;
+  background-color: #0c031c;
 }
 button,
 input[type="submit"],
@@ -802,7 +752,7 @@ table,
 }
 .tree-view,
 table {
-  color: #0d031e;
+  color: #0c031c;
 }
 [class^="field-row"] + [class^="field-row"] {
   margin-top: 6px;
@@ -895,7 +845,7 @@ code * {
   background: linear-gradient(90deg, #92b19e, #586f73);
 }
 .title-bar-text {
-  color: #0d031e;
+  color: #0c031c;
   letter-spacing: 0;
   margin-right: 24px;
   font-size: 16px;
@@ -945,38 +895,38 @@ code * {
 }
 .title-bar-controls button[aria-label="Minimize"],
 .title-bar-controls button[aria-label].minimize {
-  background-image: url("/assets/img/98css/minimize.svg");
+  background-image: url("/files/98svg/minimize.svg");
   background-repeat: no-repeat;
   background-position: bottom 3px left 4px;
 }
 .title-bar-controls button[aria-label="Maximize"],
 .title-bar-controls button[aria-label].maximize {
-  background-image: url("/assets/img/98css/maximize.svg");
+  background-image: url("/files/98svg/maximize.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 3px;
 }
 .title-bar-controls button[aria-label="Maximize"]:disabled,
 .title-bar-controls button[aria-label].maximize:disabled {
-  background-image: url("/assets/img/98css/maximize-disabled.svg");
+  background-image: url("/files/98svg/maximize-disabled.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 3px;
 }
 .title-bar-controls button[aria-label="Restore"],
 .title-bar-controls button[aria-label].restore {
-  background-image: url("/assets/img/98css/restore.svg");
+  background-image: url("/files/98svg/restore.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 3px;
 }
 .title-bar-controls button[aria-label="Help"],
 .title-bar-controls button[aria-label].help {
-  background-image: url("/assets/img/98css/help.svg");
+  background-image: url("/files/98svg/help.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 5px;
 }
 .title-bar-controls button[aria-label="Close"],
 .title-bar-controls button[aria-label].close {
   margin-left: 2px;
-  background-image: url("/assets/img/98css/close.svg");
+  background-image: url("/files/98svg/close.svg");
   background-repeat: no-repeat;
   background-position: top 3px left 4px;
 }
@@ -1099,10 +1049,10 @@ input[type="radio"] + label::before {
   width: 12px;
   height: 12px;
   margin-right: 6px;
-  background: url("/assets/img/98css/radio-border.svg");
+  background: url("/files/98svg/radio-border.svg");
 }
 input[type="radio"]:active + label::before {
-  background: url("/assets/img/98css/radio-border-disabled.svg");
+  background: url("/files/98svg/radio-border-disabled.svg");
 }
 input[type="radio"]:checked + label::after {
   content: "";
@@ -1112,13 +1062,13 @@ input[type="radio"]:checked + label::after {
   top: calc(12px / 2 - 4px / 2);
   left: calc(-1 * 18px + 12px / 2 - 4px / 2);
   position: absolute;
-  background: url("/assets/img/98css/radio-dot.svg");
+  background: url("/files/98svg/radio-dot.svg");
 }
 input[type="radio"][disabled] + label::before {
-  background: url("/assets/img/98css/radio-border-disabled.svg");
+  background: url("/files/98svg/radio-border-disabled.svg");
 }
 input[type="radio"][disabled]:checked + label::after {
-  background: url("/assets/img/98css/radio-dot-disabled.svg");
+  background: url("/files/98svg/radio-dot-disabled.svg");
 }
 input[type="checkbox"] + label {
   position: relative;
@@ -1145,13 +1095,13 @@ input[type="checkbox"]:checked + label::after {
   height: var(--checkmark-width);
   position: absolute;
   left: calc(-1 * 19px + 3px);
-  background: url("/assets/img/98css/checkmark.svg");
+  background: url("/files/98svg/checkmark.svg");
 }
 input[type="checkbox"][disabled] + label::before {
   background: #340c4f;
 }
 input[type="checkbox"][disabled]:checked + label::after {
-  background: url("/assets/img/98css/checkmark-disabled.svg");
+  background: url("/files/98svg/checkmark-disabled.svg");
 }
 input[type="number"] {
   /* need this 1 pixel to fit the spinner controls in box */
@@ -1195,18 +1145,18 @@ input[type="range"]:focus {
   outline: none;
 }
 input[type="range"].has-box-indicator ::-webkit-slider-thumb {
-  background: url("/assets/img/98css/indicator-rectangle-horizontal.svg");
+  background: url("/files/98svg/indicator-rectangle-horizontal.svg");
   transform: translateY(-10px);
 }
 input[type="range"].has-box-indicator::-moz-range-thumb {
-  background: url("/assets/img/98css/indicator-rectangle-horizontal.svg");
+  background: url("/files/98svg/indicator-rectangle-horizontal.svg");
   transform: translateY(0px);
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 21px;
   width: 11px;
-  background: url("/assets/img/98css/indicator-horizontal.svg");
+  background: url("/files/98svg/indicator-horizontal.svg");
   transform: translateY(-8px);
   box-shadow: none;
   border: none;
@@ -1216,7 +1166,7 @@ input[type="range"]::-moz-range-thumb {
   width: 11px;
   border: 0;
   border-radius: 0;
-  background: url("/assets/img/98css/indicator-horizontal.svg");
+  background: url("/files/98svg/indicator-horizontal.svg");
   transform: translateY(2px);
 }
 input[type="range"]::-webkit-slider-runnable-track {
@@ -1246,7 +1196,7 @@ select {
   -moz-appearance: none;
   position: relative;
   padding-right: 32px;
-  background-image: url("/assets/img/98css/button-down.svg");
+  background-image: url("/files/98svg/button-down.svg");
   background-position: top 2px right 2px;
   background-repeat: no-repeat;
   border-radius: 0;
@@ -1260,7 +1210,7 @@ select:focus option {
   background-color: #56158f;
 }
 select:active {
-  background-image: url("/assets/img/98css/button-down-active.svg");
+  background-image: url("/files/98svg/button-down-active.svg");
 }
 /*-------------------------------
  * progress indicators.
@@ -1441,19 +1391,19 @@ ul.tree-view details > summary::-webkit-details-marker {
 }
 ::-webkit-scrollbar-button:vertical:start {
   height: 17px;
-  background-image: url("/assets/img/98css/button-up.svg");
+  background-image: url("/files/98svg/button-up.svg");
 }
 ::-webkit-scrollbar-button:vertical:end {
   height: 17px;
-  background-image: url("/assets/img/98css/button-down.svg");
+  background-image: url("/files/98svg/button-down.svg");
 }
 ::-webkit-scrollbar-button:horizontal:start {
   width: 16px;
-  background-image: url("/assets/img/98css/button-left.svg");
+  background-image: url("/files/98svg/button-left.svg");
 }
 ::-webkit-scrollbar-button:horizontal:end {
   width: 16px;
-  background-image: url("/assets/img/98css/button-right.svg");
+  background-image: url("/files/98svg/button-right.svg");
 }
 /*---------------------------
  * tables.
@@ -1476,7 +1426,7 @@ table > thead > tr > * {
   padding: 0 6px;
 }
 table.interactive > tbody > tr {
-  cursor: pointer;
+  cursor: url(/files/cursors/link-select.png), pointer;
 }
 table > tbody > tr.highlighted {
   color: #fff;
@@ -1507,7 +1457,7 @@ body.crt::before {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: url(/assets/img/crt/crt.png);
+  background-image: url(/files/crt.png);
   z-index: 99999;
   opacity: 0.3;
   mix-blend-mode: multiply;
@@ -1516,67 +1466,67 @@ body.crt::before {
 }
 @keyframes textShadow {
   0% {
-    text-shadow: 0.43899242px 0 1px rgba(0, 30, 255, 0.25), -0.43899242px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.43899242px 0 1px rgba(0, 30, 255, 0.2), -0.43899242px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   5% {
-    text-shadow: 2.7928974px 0 1px rgba(0, 30, 255, 0.25), -2.7928974px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.7928974px 0 1px rgba(0, 30, 255, 0.2), -2.7928974px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   10% {
-    text-shadow: 0.02956276px 0 1px rgba(0, 30, 255, 0.25), -0.02956276px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.02956276px 0 1px rgba(0, 30, 255, 0.2), -0.02956276px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   15% {
-    text-shadow: 0.40218539px 0 1px rgba(0, 30, 255, 0.25), -0.40218539px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.40218539px 0 1px rgba(0, 30, 255, 0.2), -0.40218539px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   20% {
-    text-shadow: 3.47940379px 0 1px rgba(0, 30, 255, 0.25), -3.47940379px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 3.47940379px 0 1px rgba(0, 30, 255, 0.2), -3.47940379px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   25% {
-    text-shadow: 1.61256304px 0 1px rgba(0, 30, 255, 0.25), -1.61256304px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 1.61256304px 0 1px rgba(0, 30, 255, 0.2), -1.61256304px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   30% {
-    text-shadow: 0.70155901px 0 1px rgba(0, 30, 255, 0.25), -0.70155901px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.70155901px 0 1px rgba(0, 30, 255, 0.2), -0.70155901px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   35% {
-    text-shadow: 3.89691405px 0 1px rgba(0, 30, 255, 0.25), -3.89691405px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 3.89691405px 0 1px rgba(0, 30, 255, 0.2), -3.89691405px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   40% {
-    text-shadow: 3.87090561px 0 1px rgba(0, 30, 255, 0.25), -3.87090561px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 3.87090561px 0 1px rgba(0, 30, 255, 0.2), -3.87090561px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   45% {
-    text-shadow: 2.23105696px 0 1px rgba(0, 30, 255, 0.25), -2.23105696px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.23105696px 0 1px rgba(0, 30, 255, 0.2), -2.23105696px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   50% {
-    text-shadow: 0.0808429px 0 1px rgba(0, 30, 255, 0.25), -0.0808429px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.0808429px 0 1px rgba(0, 30, 255, 0.2), -0.0808429px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   55% {
-    text-shadow: 2.37584611px 0 1px rgba(0, 30, 255, 0.25), -2.37584611px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.37584611px 0 1px rgba(0, 30, 255, 0.2), -2.37584611px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   60% {
-    text-shadow: 2.20219305px 0 1px rgba(0, 30, 255, 0.25), -2.20219305px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.20219305px 0 1px rgba(0, 30, 255, 0.2), -2.20219305px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   65% {
-    text-shadow: 2.86387806px 0 1px rgba(0, 30, 255, 0.25), -2.86387806px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.86387806px 0 1px rgba(0, 30, 255, 0.2), -2.86387806px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   70% {
-    text-shadow: 0.48874025px 0 1px rgba(0, 30, 255, 0.25), -0.48874025px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.48874025px 0 1px rgba(0, 30, 255, 0.2), -0.48874025px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   75% {
-    text-shadow: 1.89484913px 0 1px rgba(0, 30, 255, 0.25), -1.89484913px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 1.89484913px 0 1px rgba(0, 30, 255, 0.2), -1.89484913px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   80% {
-    text-shadow: 0.08330373px 0 1px rgba(0, 30, 255, 0.25), -0.08330373px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.08330373px 0 1px rgba(0, 30, 255, 0.2), -0.08330373px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   85% {
-    text-shadow: 0.09769827px 0 1px rgba(0, 30, 255, 0.25), -0.09769827px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 0.09769827px 0 1px rgba(0, 30, 255, 0.2), -0.09769827px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   90% {
-    text-shadow: 3.44333976px 0 1px rgba(0, 30, 255, 0.25), -3.44333976px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 3.44333976px 0 1px rgba(0, 30, 255, 0.2), -3.44333976px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   95% {
-    text-shadow: 2.18418389px 0 1px rgba(0, 30, 255, 0.25), -2.18418389px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.18418389px 0 1px rgba(0, 30, 255, 0.2), -2.18418389px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
   100% {
-    text-shadow: 2.62087645px 0 1px rgba(0, 30, 255, 0.25), -2.62087645px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
+    text-shadow: 2.62087645px 0 1px rgba(0, 30, 255, 0.2), -2.62087645px 0 1px rgba(255, 0, 80, 0.2), 0 0 3px;
   }
 }
 .outline-focus-offset,
