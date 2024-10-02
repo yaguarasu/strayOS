@@ -246,6 +246,19 @@ div.contain {
 #taskbar #start-microblog:hover {
   cursor: url(/files/cursors/link-select.png), pointer;
 }
+#taskbar-start:active span,
+#taskbar #start-home:active span,
+#taskbar #start-changelog:active span,
+#taskbar #start-microblog:active span {
+  color: transparent!important;
+  text-shadow: #33c69b 1px 1px;
+}
+#taskbar-start:active img,
+#taskbar #start-home:active img,
+#taskbar #start-changelog:active img,
+#taskbar #start-microblog:active img {
+  translate: 1px 1px;
+}
 #taskbar-start > span.strayOS-i,
 #taskbar #start-home > span.strayOS-i,
 #taskbar #start-changelog > span.strayOS-i,
@@ -273,12 +286,6 @@ div.contain {
   display: block;
   color: #33c69b;
 }
-#taskbar-start:active,
-#taskbar #start-home:active,
-#taskbar #start-changelog:active,
-#taskbar #start-microblog:active {
-  translate: 4px 4px;
-}
 .banner {
   width: fit-content;
   height: fit-content;
@@ -300,8 +307,8 @@ div.contain {
   height: auto;
 }
 #saturn-png {
-  left: 460px;
-  top: -295px;
+  left: 560px;
+  bottom: -245px;
   z-index: 1;
 }
 #saturn-png img {
@@ -531,6 +538,7 @@ button > span:hover {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: end;
   padding-bottom: 3px;
   border-bottom: #410066 3px double;
   font-style: oblique;
@@ -538,9 +546,13 @@ button > span:hover {
 }
 #microblog .sunken-panel .micro-cn .micro-post .mp-head .mp-title {
   margin-left: 3px;
+  margin-right: 3px;
+  text-align: left;
 }
 #microblog .sunken-panel .micro-cn .micro-post .mp-head .mp-timestamp {
   margin-right: 3px;
+  margin-left: 3px;
+  text-align: right;
 }
 #microblog .sunken-panel .micro-cn hr {
   margin-top: 0;
@@ -582,6 +594,7 @@ button > span:hover {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: end;
   padding-bottom: 3px;
   border-bottom: #410066 3px double;
   font-style: oblique;
@@ -589,9 +602,13 @@ button > span:hover {
 }
 #changelog .sunken-panel .cl-cn .cl-post .cl-head .cl-title {
   margin-left: 3px;
+  margin-right: 3px;
+  text-align: left;
 }
 #changelog .sunken-panel .cl-cn .cl-post .cl-head .cl-timestamp {
   margin-right: 3px;
+  margin-left: 3px;
+  text-align: right;
 }
 #changelog .sunken-panel .cl-cn hr {
   margin-top: 0;
@@ -734,21 +751,21 @@ button > span:hover {
 #guestmsg {
   width: 200px;
   position: absolute;
-  top: -265px;
-  left: 330px;
+  bottom: -265px;
+  left: 400px;
   z-index: 2;
 }
 #guestbook {
   width: 292px;
   position: absolute;
   top: -275px;
-  left: 400px;
+  left: 300px;
   height: fit-content;
 }
 #guestbook iframe {
   scrollbar-width: thin;
   width: 277px;
-  height: 475px;
+  height: 400px;
 }
 #stats .status-bar-field {
   color: #33c69b;
@@ -1208,7 +1225,8 @@ button:not(:disabled):active,
 input[type="submit"]:not(:disabled):active,
 input[type="reset"]:not(:disabled):active {
   box-shadow: inset -1px -1px #56158f, inset 1px 1px #120816, inset -2px -2px #410066, inset 2px 2px #240a30;
-  translate: 4px 4px;
+  text-shadow: #88b6ae 1px 1px;
+  color: transparent;
 }
 button.default:not(:disabled):active,
 input[type="submit"].default:not(:disabled):active,
@@ -1447,6 +1465,9 @@ menu[role="tablist"] button {
   text-decoration: none;
   min-width: unset;
   padding: 3px 12px;
+}
+menu[role="tablist"] button:active {
+  text-shadow: #33c69b;
 }
 menu[role="tablist"] button:first-of-type::before {
   content: "";

@@ -189,6 +189,23 @@ if (changelog) {
   <div class="cl-post">
     <div class="cl-head">
       <div class="cl-title">
+        changes: /root.
+      </div>
+      <div class="cl-timestamp">
+        <time datetime="2024-10-02">02oct</time>
+      </div>
+    </div>
+    <div class="cl-body">
+      <p>
+        changes: reordered /root elements;<br>
+        additions: couple new posts on the microblog.
+      </p>
+    </div>
+    <br><hr>
+  </div>
+  <div class="cl-post">
+    <div class="cl-head">
+      <div class="cl-title">
         changes: #taskbar.
       </div>
       <div class="cl-timestamp">
@@ -241,6 +258,22 @@ const microblog = document.getElementById("microblog-cn");
 if (microblog) {
   microblog.innerHTML = 
   `
+  <div class="micro-post">
+    <div class="mp-head">
+      <div class="mp-title">
+        optimizations needed.
+      </div>
+      <div class="mp-timestamp">
+        <time datetime="2024-10-01 03:54">02oct 4am</time>
+      </div>
+    </div>
+    <div class="mp-body">
+      <p>
+        active updates may be put on hold; optimizations to code are much needed already, with the stylesheets and scripts a mess. it would rather be that this is gotten under control prior to continuing, please stand by.
+      </p>
+    </div>
+    <br><hr>
+  </div>
   <div class="micro-post">
     <div class="mp-head">
       <div class="mp-title">

@@ -165,7 +165,8 @@ button:not(:disabled):active, input[type="submit"]:not(:disabled):active,
 input[type="reset"]:not(:disabled):active {
   box-shadow: @sunkenouter, @sunkeninner;
   //text-shadow: 1px 1px @text;
-  translate: 4px 4px;
+  text-shadow: @text 1px 1px;
+  color: transparent;
 }
 
 button.default:not(:disabled):active, input[type="submit"].default:not(:disabled):active,
@@ -393,6 +394,9 @@ menu[role="tablist"] {
     text-decoration: none;
     min-width: unset;
     padding: 3px 12px;
+    &:active {
+      text-shadow: @active-tb2;
+    }
     &:first-of-type::before {
       content: "";
       display: block;

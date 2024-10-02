@@ -133,6 +133,15 @@ div.contain {
       &:hover {
         cursor: @crs-link;
       }
+      &:active {
+        span {
+          color: transparent!important;
+          text-shadow: @active-tb2 1px 1px;
+        }
+        img {
+          translate: 1px 1px;
+        }
+      }
     &>span.strayOS-i {
       height: 100%;
       display: block;
@@ -151,9 +160,6 @@ div.contain {
         display: block;
         color: @active-tb2;
       }
-    }
-    &:active {
-      translate: 4px 4px;
     }
   }
 }
@@ -179,8 +185,8 @@ div.contain {
   }
 }
 #saturn-png {
-  left: 460px;
-  top: -295px;
+  left: 560px;
+  bottom: -245px;
   z-index: 1;
   img {
     .pxs-w-150();
@@ -425,15 +431,20 @@ button {
           display: flex;
           flex-flow: row;
           justify-content: space-between;
+          align-items: end;
           padding-bottom: 3px;
           border-bottom: @highlight-2 3px double;
           font-style: oblique;
           font-weight: bold;
           .mp-title {
             margin-left: 3px;
+            margin-right: 3px;
+            text-align: left;
           }
           .mp-timestamp {
             margin-right: 3px;
+            margin-left: 3px;
+            text-align: right;
           }
         }
       }
@@ -478,15 +489,20 @@ button {
           display: flex;
           flex-flow: row;
           justify-content: space-between;
+          align-items: end;
           padding-bottom: 3px;
           border-bottom: @highlight-2 3px double;
           font-style: oblique;
           font-weight: bold;
           .cl-title {
             margin-left: 3px;
+            margin-right: 3px;
+            text-align: left;
           }
           .cl-timestamp {
             margin-right: 3px;
+            margin-left: 3px;
+            text-align: right;
           }
         }
       }
@@ -639,20 +655,20 @@ button {
 #guestmsg {
   .pxs-w-200();
   position: absolute;
-  top: -265px;
-  left: 330px;
+  bottom: -265px;
+  left: 400px;
   z-index: 2;
 }
 #guestbook {
   width: 292px;
   position: absolute;
   top: -275px;
-  left: 400px;
+  left: 300px;
   height: fit-content;
   iframe {
     scrollbar-width: thin;
     width: 277px;
-    height: 475px;
+    height: 400px;
     //.pxs-h-600;
   }
 }
