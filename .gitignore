@@ -5,3 +5,10 @@ Gemfile
 Gemfile.lock
 # jekyll
 _site/
+# anything which is not ready
+#repository/
+#logs/
+#blog/
+#bios/
+#attributions/
+#root/

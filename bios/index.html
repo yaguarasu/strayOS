@@ -10,7 +10,7 @@
     <script src="/files/js/preloader.js"></script>
 	</head>
 	<body class="crt">
-    <div id="bg2"></div>
+    
     <div id="preloader">
       <div class="loader_line"></div>
     </div>
@@ -44,9 +44,91 @@
             start
           </span>
         </button>
+        <div class="window" id="division"></div>
+          <button id="start-home" class="sfx-ok" 
+                  type="button" onclick="location.href='/root'"
+                  aria-label="return to home page">
+            <div class="tooltip-cn top">
+              <span class="strayOS-i">
+                <img src="/files/icons/strayOS_worldnet.png" alt="">
+              </span>
+              <span class="tooltip">
+                return to the /root.
+              </span>
+            </div>
+          </button>
+          <div class="division window"></div>
+          <button id="start-changelog" type="button" class="sfx-ok"
+                  aria-label="open changelog">
+            <div class="tooltip-cn top">
+              <span class="strayOS-i">
+                <img src="/files/icons/strayOS_odbc.png" alt="">
+              </span>
+              <span class="tooltip">
+                sOS<span class="pink">.</span>CHANGELOG <span class="pink">?</span> OPEN <span class="pink">:</span> CLOSE
+              </span>
+            </div>
+          </button>
+          <button id="start-microblog" type="button" class="sfx-ok"
+                  aria-label="check microblog">
+            <div class="tooltip-cn top">
+              <span class="strayOS-i">
+                <img src="/files/icons/strayOS_infrared.png" alt="">
+              </span>
+              <span class="tooltip">
+                sOS<span class="pink">.</span>MiCROBLOG <span class="pink">?</span> OPEN <span class="pink">:</span> CLOSE
+              </span>
+            </div>
+          </button>
+        </div>
+  
+        <aside id="menu-cn" class="window"></aside>
+  
+        <aside class="window" id="changelog">
+          <div class="window-head">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                sOS.LOGS(CHANGELOG)
+              </div>
+              <div class="title-bar-controls">
+                <button aria-label="Help"></button>
+              </div>
+            </div>
+          </div>
+          <div class="window-body">
+            <div class="sunken-panel">
+              <div class="cl-cn" id="changelog-cn">
+                
+              </div>
+            </div>
+          </div>
+        </aside>
+  
+        <aside class="window" id="microblog">
+          <div class="window-head">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                sOS.LOGS(MiCROBLOG)
+              </div>
+              <div class="title-bar-controls">
+                <button aria-label="Help"></button>
+              </div>
+            </div>
+          </div>
+          <div class="window-body">
+            <div class="sunken-panel">
+              <div class="micro-cn" id="microblog-cn">
+                
+              </div>
+            </div>
+          </div>
+          <div class="status-bar">
+            <div class="status-bar-field">
+              <i>timezone</i>: utc-6.
+            </div>
+          </div>
+        </aside>
       </div>
-      <aside id="menu-cn" class="window"></aside>
-
     </div>
     <script src="/files/js/global.js"></script>
 	</body>

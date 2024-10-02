@@ -35,7 +35,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-access-denied">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/files/icons/strayOS_directory-1.png" alt="">
+                    <img src="/files/icons/strayOS_appwizard.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Repositories
@@ -84,7 +84,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   </div>
                 </div>
                 <div id="submenu_systemBIOS" class="start-entry-more-cn window">
-                  <a class="start-entry-more sfx-ok" href="/bios/">
+                  <a class="start-entry-more sfx-ok" href="/bios">
                     <div class="start-entry-more-icon">
                       <img src="/files/icons/strayOS_hardware-1.png" alt="">
                     </div>
@@ -94,7 +94,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   </a>
                   <a class="start-entry-more sfx-ok" href="/bios/components">
                     <div class="start-entry-more-icon">
-                      <img src="/files/icons/strayOS_chip-ramdrive-1.png" alt="">
+                      <img src="/files/icons/strayOS_ramdrive.png" alt="">
                     </div>
                     <div>
                       Components
@@ -114,7 +114,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                 <div id="submenu_logs" class="start-entry-more-cn window">
                   <a class="start-entry-more sfx-ok" href="/blog">
                     <div class="start-entry-more-icon">
-                      <img src="/" alt="">
+                      <img src="/files/icons/strayOS_win3.png" alt="">
                     </div>
                     <div>
                       Blog Posts
@@ -122,7 +122,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   </a>
                   <a class="start-entry-more sfx-ok" href="/logs/journals">
                     <div class="start-entry-more-icon">
-                      <img src="/" alt="">
+                      <img src="/files/icons/strayOS_signaturexcl.png" alt="">
                     </div>
                     <div>
                       Personal Journals
@@ -133,7 +133,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
               <div class="start-entry sfx-ok-pc" id="repositories">
                 <div class="start-entry-main">
                   <div class="start-entry-icon">
-                    <img src="/files/icons/strayOS_directory-1.png" alt="">
+                    <img src="/files/icons/strayOS_appwizard.png" alt="">
                   </div>
                   <div class="start-entry-text">
                     Repositories
@@ -142,7 +142,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                 <div class="start-entry-more-cn window" id="submenu_repositories">
                   <a class="start-entry-more sfx-ok" href="/repository/quotes">
                     <div class="start-entry-more-icon">
-                      <img src="/" alt="">
+                      <img src="/files/icons/strayOS_fileset.png" alt="">
                     </div>
                     <div>
                       Quote Repository
@@ -150,7 +150,7 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   </a>
                   <a class="start-entry-more sfx-ok" href="/repository/resources">
                     <div class="start-entry-more-icon">
-                      <img src="/" alt="">
+                      <img src="/files/icons/strayOS_pc-grad.png" alt="">
                     </div>
                     <div>
                       Resource Repository
@@ -164,7 +164,8 @@ if (makeMenuBar.classList.contains("discretion-page")) {
                   <div class="start-entry-icon">
                     <img src="/files/icons/strayOS_directory-2.png" alt="">
                   </div>
-                  <div class="start-entry-text">Attributions
+                  <div class="start-entry-text">
+                    Attributions
                   </div>
                 </div>
               </a>
@@ -178,4 +179,82 @@ if (makeMenuBar.classList.contains("discretion-page")) {
             </div>
           </div>
         </div>`;
+}
+
+const changelog = document.getElementById("changelog-cn");
+
+if (changelog) {
+  changelog.innerHTML = 
+  `
+  <div class="cl-post">
+    <div class="cl-head">
+      <div class="cl-title">
+        changes: #taskbar.
+      </div>
+      <div class="cl-timestamp">
+        <time datetime="2024-10-01">01oct</time>
+      </div>
+    </div>
+    <div class="cl-body">
+      <p>
+        changes: changelog and microblog can now be accessed site-wide via the taskbar, space made for other elements in /root.
+      </p>
+    </div>
+    <br><hr>
+  </div>
+  <div class="cl-post">
+    <div class="cl-head">
+      <div class="cl-title">
+        changes: /root.
+      </div>
+      <div class="cl-timestamp">
+        <time datetime="2024-09-30">30sept</time>
+      </div>
+    </div>
+    <div class="cl-body">
+      <p>
+        additions: queue (to-do list), directory (quick-links), slot for future webrings; all on /root.
+      </p>
+    </div>
+    <br><hr>
+  </div>
+  <div class="cl-post">
+    <div class="cl-head">
+      <div class="cl-title">
+        new: /root.
+      </div>
+      <div class="cl-timestamp">
+        <time datetime="2024-09-30">30sept</time>
+      </div>
+    </div>
+    <div class="cl-body">
+      <p>
+        additions: a homepage containing a changelog, guestbook, & microblog.
+      </p>
+    </div>
+  </div>
+  `
+}
+
+const microblog = document.getElementById("microblog-cn");
+
+if (microblog) {
+  microblog.innerHTML = 
+  `
+  <div class="micro-post">
+    <div class="mp-head">
+      <div class="mp-title">
+        setting up.
+      </div>
+      <div class="mp-timestamp">
+        <time datetime="2024-09-30 16:28">30sept 4pm</time>
+      </div>
+    </div>
+    <div class="mp-body">
+      <p>
+        going to be able to work on the rest of this site soon. finally finished with setting up the primary functions. it will be slow, however.
+      </p>
+    </div>
+  </div>
+  `
 }
