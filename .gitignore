@@ -1,14 +1,13 @@
-# pre-compiled less
-less/
 # gem
 Gemfile
 Gemfile.lock
 # jekyll
 _site/
 # anything which is not ready
-#repository/
-#logs/
-#blog/
-#bios/
-#attributions/
-#root/
+repository/
+logs/
+blog/
+bios/
+attributions/
+root/
+snippets/

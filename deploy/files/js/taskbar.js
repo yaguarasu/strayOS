@@ -244,6 +244,22 @@ if (microblog) {
   <div class="micro-post">
     <div class="mp-head">
       <div class="mp-title">
+        deploy2nekoweb.
+      </div>
+      <div class="mp-timestamp">
+        <time datetime="2024-10-01 01:09">02oct 1am</time>
+      </div>
+    </div>
+    <div class="mp-body">
+      <p>
+        successfully set up deploy2nekoweb; updates will be much more convenient to put out from here on out.
+      </p>
+    </div>
+    <br><hr>
+  </div>
+  <div class="micro-post">
+    <div class="mp-head">
+      <div class="mp-title">
         setting up.
       </div>
       <div class="mp-timestamp">
