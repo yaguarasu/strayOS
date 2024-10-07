@@ -1,7 +1,8 @@
 {
   "less.compile": {
-    "main": ["${workspaceFolder}\\less\\\\organized\\allstyles.less"],
-    "out": "${workspaceFolder}\\layout_test\\files\\css\\style.css",
+    "main": ["${workspaceFolder}\\less\\allstyles.less"],
+    "out": "${workspaceFolder}\\deploy\\files\\css\\style.css",
     "relativeUrls": true
-  }
+  },
+  "livePreview.serverRoot": "deploy/",
 }

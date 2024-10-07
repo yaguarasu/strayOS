@@ -30,31 +30,6 @@
 
 }
 
-.mini-logs {
-
-  bottom: -150%;
-  height: 365px;
-  justify-content: left;
-  position: absolute;
-  transition: .25s;
-  visibility: hidden;
-  width: 250px;
-  
-  &.open {
-   
-    &:extend(.start.open);
-    
-  }
-
-  .sunken-panel {
-
-    margin-bottom: 4px;
-    margin-left: 0;
-    width: 100%;
-
-  }
-}
-
 .briefpost__container {
   /* containers:                        *
    * #changelog-posts, #microblog-posts */
@@ -88,14 +63,31 @@
   font-style: oblique;
   font-weight: bold;
   justify-content: space-between;
-  padding-bottom: 3px;
+  margin-bottom: 5px; 
+  padding-bottom: 5px;
 
   .briefpost__title {
     
     margin-left: 3px;
     margin-right: 3px;
     text-align: left;
-    
+
+    div {
+
+      margin: 3px 0;
+
+      &:first-of-type {
+
+        margin-top: 0; 
+      
+      }
+ 
+      &:last-of-type {
+
+        margin-bottom: 0;
+      
+      }
+    }
   }
 
   .briefpost__time {

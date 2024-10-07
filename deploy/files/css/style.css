@@ -733,6 +733,7 @@ select:active {
   padding: 0 2px 2px 2px;
 }
 .banner__broken-screen {
+  animation: floater 3s ease-in-out infinite;
   bottom: -120px;
   left: -245px;
 }
@@ -777,6 +778,7 @@ select:active {
   width: 225px;
 }
 .banner__ryqz {
+  animation: floater 3s ease-in-out infinite;
   left: 50px;
   top: -55px;
 }
@@ -849,20 +851,6 @@ select:active {
 #microblog .status-bar {
   margin-top: -1px;
 }
-.mini-logs {
-  bottom: -150%;
-  height: 365px;
-  justify-content: left;
-  position: absolute;
-  transition: 0.25s;
-  visibility: hidden;
-  width: 250px;
-}
-.mini-logs .sunken-panel {
-  margin-bottom: 4px;
-  margin-left: 0;
-  width: 100%;
-}
 .briefpost__container {
   /* containers:                        *
    * #changelog-posts, #microblog-posts */
@@ -887,12 +875,22 @@ select:active {
   font-style: oblique;
   font-weight: bold;
   justify-content: space-between;
-  padding-bottom: 3px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .briefpost__head .briefpost__title {
   margin-left: 3px;
   margin-right: 3px;
   text-align: left;
+}
+.briefpost__head .briefpost__title div {
+  margin: 3px 0;
+}
+.briefpost__head .briefpost__title div:first-of-type {
+  margin-top: 0;
+}
+.briefpost__head .briefpost__title div:last-of-type {
+  margin-bottom: 0;
 }
 .briefpost__head .briefpost__time {
   margin-left: 3px;
@@ -1683,9 +1681,10 @@ button:active [aria-label="Close"] {
   margin-right: 6px;
 }
 .window--entry-info {
+  animation: floater 3s ease-in-out infinite;
   position: absolute;
   right: 260px;
-  top: 15px;
+  top: 25px;
   width: 200px;
   z-index: -2;
 }
