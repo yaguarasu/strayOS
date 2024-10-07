@@ -1,9 +1,35 @@
-* {
+/* {
+  box-sizing: border-box;
+}*/
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* {
+  margin: 0;
+}*/
+
 body {
-  cursor: @crs-default;
+  -webkit-font-smoothing: antialiased;
+  //line-height: 1.5;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+canvas, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  cursor: url("/files/cursors/pointer.png"), @crs-default;
   scrollbar-color: @link @window;
   scrollbar-gutter: stable;
 }
@@ -14,17 +40,6 @@ a {
     color: @hover;
     transition: .5s;
   }
-}
-#pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  mix-blend-mode: lighten;
 }
 
 div.contain {
@@ -41,7 +56,7 @@ div.contain {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  cursor: @crs-default;
+  cursor: inherit;
 }
 
 #caution {
@@ -81,7 +96,7 @@ div.contain {
     #division, .division {
       width: 7px;
       height: 100%;
-      margin: 0 4px;
+      margin: 0 5px;
     }
     .tooltip-cn {
       height: 100%;
@@ -91,7 +106,14 @@ div.contain {
       }
     }
     #start-microblog {
-      margin: 0 4px;
+      margin: 0 5px;
+    }
+    #taskbar-start {
+      img {
+        margin-left: -5px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
     }
     #start-home, #start-changelog, #start-microblog {
       padding: 4px;
@@ -139,7 +161,7 @@ div.contain {
           text-shadow: @active-tb2 1px 1px;
         }
         img {
-          translate: 1px 1px;
+          translate: 2px 2px;
         }
       }
     &>span.strayOS-i {
@@ -176,11 +198,11 @@ div.contain {
   }
 }
 #coronet-png {
-  left: -520px;
+  left: -125px;
   top: -290px;
   img {
-    .pxs-w-250();
-    height: auto;
+    width: auto;
+    height: 220px;
     //image-rendering: smooth;
   }
 }
@@ -188,6 +210,7 @@ div.contain {
   left: 560px;
   bottom: -245px;
   z-index: 1;
+  display: none;
   img {
     .pxs-w-150();
     height: auto;
@@ -235,7 +258,7 @@ div.contain {
   bottom: -150%;
   transition: .25s;
   visibility: hidden;
-  &.menu-open, .menu-open {
+  &.open, .open {
     bottom: 55px!important;
     transition: .5s;
     visibility: visible;
@@ -394,10 +417,6 @@ button {
   z-index: -1;
 }
 
-.homeshift {
-  margin-right: 60px;
-}
-
 #microblog {
   .pxs-w-250();
   height: 365px;
@@ -517,7 +536,7 @@ button {
 #home-page {
   height: fit-content;
   right: 0;
-  left: -375px;
+  left: 20px;
   .window-body {
     padding: 0 2px 0 8px;
   }
@@ -583,7 +602,7 @@ button {
               color: @backdrop;
               font-size: 11px;
               text-align: center;
-              font-family: @font[dos9x16];
+              font-family: @font[dos8x16];
               margin-top: -2.5px;
             }
           }
@@ -649,6 +668,9 @@ button {
           transition: 1s;
         }
       }
+      &#noAI {
+        filter: hue-rotate(280deg) contrast(350%);
+      }
     }
   }
 }
@@ -658,6 +680,7 @@ button {
   bottom: -265px;
   left: 400px;
   z-index: 2;
+  display: none;
 }
 #guestbook {
   width: 292px;
@@ -665,6 +688,7 @@ button {
   top: -275px;
   left: 300px;
   height: fit-content;
+  display: none;
   iframe {
     scrollbar-width: thin;
     width: 277px;
@@ -720,7 +744,7 @@ button {
   color: @active-tb2;
   justify-content: left;
   align-items: center;
-  font-family: @font[dos9x16];
+  font-family: @font[dos8x16];
   position: relative;
   cursor: @crs-link;
   //z-index: 9999;
@@ -801,6 +825,7 @@ button {
   color: @inactive-tb1
 }
 #preloader {
+  cursor: @crs-npload;
   position: fixed;
   left: 0;
   top: 0;
@@ -901,9 +926,10 @@ img, .start-entry {
   user-select: none;
 }
 img {
-  image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  user-select: none;
 } 
 
 .sOS_button {
@@ -911,6 +937,7 @@ img {
   width: 88px;
   height: 31px;
 }
+
 .sOS_btn-wrap {
   display: flex;
   flex-flow: row;
@@ -929,6 +956,7 @@ img {
   display: inline-block;
   transition: all 0.3s ease-in-out;
   text-decoration: 1px dotted underline @link;
+  text-underline-offset: 3px;
   z-index: 9;
   &:hover {
     cursor: @crs-help;
@@ -987,6 +1015,27 @@ img {
     top:40%;
     left:-12%;
     transform: rotate(90deg);
+  }
+}
+
+.desktop {
+  position: absolute;
+  left: -70px;
+  &-icon {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-family: @font[dos8x16];
+    transition: 1s;
+    margin: 15px;
+    &:hover {
+      translate: 0 -3px;
+      transition: 1s;
+      cursor: @crs-link;
+      font-style: italic;
+    }
   }
 }
 

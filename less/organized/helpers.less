@@ -1,0 +1,79 @@
+.bundle {
+
+  /* elements that are bundled *
+   *      with one-another     */
+
+  position: relative;
+
+  &__root {
+
+    /*     bundles for /root.    */
+  
+    &--01 {
+
+      bottom: 230px;
+      left: -460px;
+
+    }
+
+    &--02 {
+
+      bottom: 265px;
+      left: 250px;
+
+    }
+  }
+}
+
+.main-wrapper {
+
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: -2;
+
+}
+
+.pink {
+
+  color: @link;
+
+}
+
+.shift {
+
+  /*     no default properties.     *
+   *     the uses are simply to     * 
+   *     assist in element          *
+   *     positioning.               *
+   *     will soley be used in      *
+   *     junction with other        *
+   *     classes/IDs/attributes     */
+
+   &--index {
+
+    translate: 130px -30px;
+
+   }
+
+   &--not-found {
+
+    translate: -85px -40px;
+
+   }
+
+   &--root {
+
+    translate: -100px -5px;
+
+   }
+}
+
+.smooth {
+
+  image-rendering: smooth;
+
+}

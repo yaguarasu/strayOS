@@ -82,12 +82,34 @@
 @taskbarouter: inset 0 1px 0 0 @highlight-1;
 @taskbarinner: inset 0 2px 0 0  @highlight-2;
 // ---------- cursors
-@crs-default: url(/files/cursors/default.png), default;
-@crs-link: url(/files/cursors/link-select.png), pointer;
-@crs-txt: url(/files/cursors/txt-select.png), text;
-@crs-unavailable: url(/files/cursors/unavailable.png), not-allowed;
-@crs-help: url(/files/cursors/help.png), help;
 
+@crs-default: url(/files/cursors/pointer.png), default;
+@crs-link: url(/files/cursors/select.png), pointer;
+@crs-txt: url(/files/cursors/text.png), text;
+@crs-unavailable: url(/files/cursors/forbidden.png), not-allowed;
+@crs-help: url(/files/cursors/question.png), help;
+@crs-npload: url(/files/cursors/hourglass.png), wait;
+
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-415px);
+  }
+}
+
+@keyframes hoverOS {
+  0%{
+    transform: translateY(6px); 
+  }
+
+  100%{
+    transform: translateY(1px); 
+  }
+
+}
 
 @keyframes lineheight {
   0% {

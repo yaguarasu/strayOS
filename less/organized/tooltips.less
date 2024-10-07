@@ -1,0 +1,100 @@
+.tooltip__container {
+
+  display: inline-block;
+  position: relative;
+  text-decoration: 2px dotted underline @link;
+  text-underline-offset: 5px;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+
+  &:hover {
+
+    text-decoration: 1px dotted underline @backdrop;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .tooltip {
+
+    background-color: @window;
+    box-shadow: @windowouter, @windowinner;
+    color: @text;
+    visibility: hidden;
+    opacity: .40;
+    min-width: 50px;
+    width: max-content;
+    max-width: 250px;
+    position: absolute;
+    padding: 10px;
+    top: -140%;
+    left: -25%;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: @font[dos8x16];
+    transform: translateY(9px);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+
+  }
+
+  &:hover .tooltip{
+
+    animation: hoverOS 1s 
+                ease-in-out 
+                infinite  
+                alternate;
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: .3s linear;
+    visibility: visible;
+
+  }
+
+  &.top .tooltip { 
+
+    top: -50px; 
+
+  }
+
+  &.left .tooltip { 
+
+    left:-170%; top:-20%; 
+
+  }
+
+  &.left .tooltip::after{
+
+    left:90%;
+    top:40%;
+    transform: rotate(-90deg);
+
+  }
+
+  &.bottom .tooltip { 
+    
+    left:-20%; top:115%; 
+
+  }
+
+  &.bottom .tooltip::after{
+    
+    left:40%;
+    top:-17%;
+    transform: rotate(180deg);
+
+  }
+
+  &.right .tooltip { 
+
+    left:115%; top:-20%; 
+
+  }
+
+  &.right .tooltip::after{
+
+    left:-12%;
+    top:40%;
+    transform: rotate(90deg);
+
+  }
+}

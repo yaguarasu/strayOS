@@ -1,0 +1,104 @@
+#preloader {
+  display: flex;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000000000000000000;
+}
+
+#preloader:after, #preloader:before {
+  background-color: @backdrop;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  
+  top: 0;
+  width: 50%;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .loader_line {
+  height: 250px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+  -o-transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+
+  width: 1px;
+}
+
+.loader_line:after {
+  -o-animation: lineround 1200ms linear 0s infinite;
+  -webkit-animation: lineround 1200ms linear 0s infinite;
+  animation: lineround 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+
+  background-color: @inactive-tb2;
+  content: "";
+  left: 0;
+  height: 100%;
+  position: absolute;
+
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  
+  top: 0;
+  width: 1px;
+}
+
+.loader_line:before {
+  -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+  -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+  animation: lineheight 1000ms ease-in-out 0s forwards;
+  
+  background-color: @inactive-tb1;
+  content: "";
+  left: 0;
+  height: 0%;
+  position: absolute;
+
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  top: 50%;
+  width: 1px;
+}
+
+.portfolio_list {
+  min-height: 50vh;
+}
+
+.preloaded .loader_line {
+  height: 100%!important;
+  opacity: 0;
+}
+
+/*hiding all*/
+.preloaded .loader_line:after {
+  opacity: 0;
+}
+
+.preloaded:after, .preloaded:before {
+  -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}

@@ -1,0 +1,271 @@
+/*--------------------------------*
+ *             /index.            *
+ *--------------------------------*/
+ .window {
+  &--caution {
+
+    bottom: 10px;
+    height: fit-content;
+    left: -75px;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+
+  }
+
+  &--notice {
+
+    position: absolute;
+    right: -135px;
+    top: -60px;
+    width: 400px;
+
+  }
+
+  &--entry {
+
+    position: absolute;
+    right: 210px;
+    top: -40px;
+    width: 325px;
+    z-index: -1;
+
+    .window__body {
+      .btns {
+
+        display: flex;
+        justify-content: center;
+        padding: 12px 8px 8px;
+
+        button {
+
+          margin-left: 6px;
+          margin-right: 6px;
+
+        }
+      }
+    }
+  }
+
+  &--entry-info {
+
+    position: absolute;
+    right: 260px;
+    top: 15px;
+    width: 200px;
+    z-index: -2;
+
+  }
+}
+
+/*--------------------------------*
+ *             /root.             *
+ *--------------------------------*/
+ .window {
+  &--root.window--primary {
+    
+    top: -65px;
+
+    hr {
+
+      margin-top: 15px;
+
+    }
+
+    .tab__panel {
+
+      margin-bottom: 0;
+
+    }
+
+    .flexroot {
+
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      width: 100%;
+      
+      > div.decor {
+        
+        align-items: end;
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+        div {
+
+          background-image: url(/files/banners/rib-heart.png);
+          background-position-x: center;
+          height: 208px;
+          margin: 10px 10px 15px;
+          padding: 0;
+          overflow: hidden;
+          width: 170px;
+
+        }
+
+      }
+
+      > div.todo {
+
+        display: flex;
+        flex-flow: column;
+        width: 70%;
+        
+        .sunken-panel {
+
+          margin: 5px;
+          
+        }
+      }
+    }
+    
+    .status-bar {
+
+      margin-top: 5px;
+
+    }
+    
+    .window__body {
+
+      height: calc(100% - (22px + 18px + 12px));
+      margin-bottom: 5px;
+      overflow-y: scroll;
+      
+    }
+  }
+  &--root.window--secondary {
+
+    left: -10px;
+
+    .window__body {
+      
+      height: calc(100% - (22px + 18px + 12px));
+      overflow-y: hidden;
+
+      .sunken-panel {
+
+        height: 330px;
+        margin: 8px 0 0 0;
+
+      }
+    }
+  }
+}
+
+.todo {
+  
+  font-weight: bold;
+  overflow: visible;
+
+  .tooltip__container.top .tooltip {
+
+    left: -50px;
+    top: -40px;
+
+  }
+
+  &.homeshift {
+
+    margin-left: 20px;
+
+  }
+
+  .sunken-panel {
+
+    overflow: visible;
+    padding-left: 5px;
+
+  }
+}
+
+.guestlog {
+
+  box-shadow: @sunkenouter, @sunkeninner;
+  height: fit-content;
+  translate: -5px 0;
+
+  iframe {
+
+    height: 260px;
+    width: 280px;
+
+  }
+}
+
+.site-stats {
+
+  .status-bar-field {
+
+    color: @active-tb2;
+  
+  }
+}
+
+.desktop {
+
+  display: flex;
+  flex-flow: row wrap;
+  left: 0;
+  margin: 10px 0 0 5px;
+  position: absolute;
+  top: 0;
+  width: 250px;
+
+  &__item {
+
+    color: @text;
+    display: flex;
+    flex-flow: column;
+    font-family: @font[dos8x16];
+    justify-content: center;
+    margin: 10px 5px 10px 5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+
+    div {
+
+      margin: 2.5px;
+      padding: 2.5px;
+    
+    }
+
+    &:hover {
+
+      color: @link;
+      cursor: @crs-link;
+      font-style: italic;
+      transition: 1s;
+      translate: 0 -3px;
+
+    }
+
+    &:active {
+
+      div {
+
+        background-color: hsla(@bg, .45);
+        color: @backdrop;
+        outline: 1.3px dashed @link;
+
+        @bg: hsl(162, 59%, 49%);
+
+      }
+
+    }
+  }
+}
+
+/*--------------------------------*
+ *           /not_found.          *
+ *--------------------------------*/
+ .window--not-found {
+  
+  width: 400px;
+  position: absolute;
+  left: -200px;
+  top: -50px;
+
+ }

@@ -1,0 +1,213 @@
+.window {
+
+  background: @window;
+  box-shadow: @windowouter, @windowinner;
+  padding: 2px;
+
+  &__body {
+
+    padding: 2px @element-pxs 2px @element-pxs;
+
+    &--scroll {
+
+      /* either child element, *
+       * or same element       */
+
+      overflow-y: scroll;
+
+    }
+  }
+
+  &[role="tabpanel"] {
+
+    position: relative;
+    z-index: 2;
+
+  }
+}
+
+.window__head {
+
+  /* children: .title-bar */
+
+  height: 22px;
+  margin: 2px;
+
+}
+
+.window__foot {
+
+  /* children: .status-bar */
+
+  margin: 4px 2px 2px 2px;
+
+}
+
+.title-bar {
+
+  align-items: center;
+  background: linear-gradient(90deg,
+              @active-tb2, @active-tb2, 
+              @active-tb1);
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  //margin: 1px;
+  padding: 3px 2px 3px 3px;
+
+  &--inactive {
+
+    background: linear-gradient(90deg,
+                @inactive-tb1, @inactive-tb1, 
+                @inactive-tb2);
+
+  }
+}
+
+.title-bar__text {
+
+  align-items: center;
+  color: @backdrop;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: @font[awful];
+  font-size: 1rem;
+  justify-content: left;
+  letter-spacing: 0;
+  margin-left: .3125rem;
+  margin-right: 1.5rem;
+  
+  &--icon {
+
+    height: .875rem;
+    image-rendering: smooth;
+    width: auto;
+
+  }
+}
+
+.title-bar__controls {
+
+  display: flex;
+
+  button {
+
+    display: block;
+    min-height: .875rem;
+    min-width: 1rem;
+    padding: 0;
+
+    &:focus {
+
+      outline: none;
+
+    }
+  }
+}
+
+
+/*---------------------*
+ *  default windows in *
+ *    general pages    *
+ *---------------------*/
+.window--primary {
+
+  height: 500px;
+  position: absolute;
+  width: 650px;
+  z-index: -1;
+
+  &__01 {
+
+    bottom: -225px;
+    left: -225px;
+
+  }
+}
+
+.window--secondary {
+  
+  height: 500px;
+  position: absolute;
+  width: 315px;
+  z-index: -1;
+
+}
+
+/*---------------------*
+ *  title bar control  *
+ *       buttons       *
+ *---------------------*/
+[aria-label="Minimize"] {
+
+  background-image: url("/files/98svg/minimize.svg");
+  background-position: bottom 3px left 4px;
+  background-repeat: no-repeat;
+
+  button:active & {
+
+    background-position: bottom 2.5px left 5px;
+  
+  }
+}
+
+[aria-label="Maximize"] {
+
+  background-image: url("/files/98svg/maximize.svg");
+  background-position: top 2px left 3px;
+  background-repeat: no-repeat;
+
+  &:disabled {
+
+    background-image: url("/files/98svg/maximize-disabled.svg");
+    background-position: top 2px left 3px;
+    background-repeat: no-repeat;
+
+  }
+  button:active & {
+
+    background-position: top 3.5px left 4px;
+
+  }
+}
+
+[aria-label="Restore"] {
+
+  background-image: url("/files/98svg/restore.svg");
+  background-position: top 2px left 3px;
+  background-repeat: no-repeat;
+
+  button:active & {
+
+    background-position: top 3px left 4px;
+
+  }
+}
+
+[aria-label="Help"] {
+
+  background-image: url("/files/98svg/help.svg");
+  background-position: top 2px left 5px;
+  background-repeat: no-repeat;
+
+  button:active & {
+
+    background-position: top 3px left 6px;
+
+  }
+}
+
+[aria-label="Close"] {
+
+  background-image: url("/files/98svg/close.svg");
+  background-position: top 3px left 4px;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+
+  button:active & {
+
+    margin-left: 2px;
+    background-position: top 4px left 5px;
+
+  }
+}

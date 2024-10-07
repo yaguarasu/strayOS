@@ -1,0 +1,528 @@
+button {
+
+  font-size: .8125rem;
+
+  > span {
+
+    color: @text;
+    text-decoration: none;
+    text-shadow: none;
+
+  }
+}
+
+button, input[type="reset"], input[type="submit"] {
+
+  background: @surface;
+  border: none;
+  border-radius: 0;
+  box-shadow: @raisedouter, @raisedinner;
+  color: transparent;
+  min-height: 23px;
+  min-width: 75px;
+  padding: 0 12px;
+  text-shadow: 0 0 @text;
+
+  &:not(:disabled):active {
+
+    box-shadow: @sunkenouter, @sunkeninner;
+    color: transparent;
+    text-shadow: @text 1px 1px;
+
+  }
+  &:focus {
+
+    outline: 1.3px dashed @link;
+    outline-offset: -5px;
+
+  }
+  &::-moz-focus-inner {
+
+    border: 0;
+
+  }
+  &:disabled, &:disabled+label {
+
+    text-shadow: 1px 1px 0 @text;
+
+  }
+}
+
+input {
+  &[type="radio"], &[type="checkbox"] {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: 0;
+    border: none;
+    margin: 0;
+    opacity: 0;
+    position: fixed;
+
+  }
+
+  &[type="radio"]+label, &[type="checkbox"]+label {
+
+    line-height: 13px;
+
+  }
+
+  &[type="radio"]:focus+label, &[type="checkbox"]:focus+label {
+    
+	  outline: 1.3px dashed @link;
+  
+  }
+
+  &[type="radio"] {
+    &+label {
+
+      position: relative;
+      margin-left: @radiototal;
+
+      &::before {
+
+        background: url("/files/98svg/radio-border.svg");
+        content: "";
+        display: inline-block;
+        height: @radiowidth;
+        left: calc(-1 * (@radiototal-pre));
+        margin-right: @radiolabel-pxs;
+        position: absolute;
+        top: 0;
+        width: @radiowidth;
+
+      }
+    }
+    &:active+label::before {
+
+      background: url("/files/98svg/radio-border-disabled.svg");
+
+    }
+    &:checked+label::after {
+
+      background: url("/files/98svg/radio-dot.svg");
+      content: "";
+      display: block;
+      height: @dotwidth;
+      left: @rdot-left;
+      position: absolute;
+      top: @rdot-top;
+      width: @dotwidth;
+      
+    }
+    &[disabled] {
+      &+label::before {
+
+        background: url("/files/98svg/radio-border-disabled.svg");
+
+      }
+      &:checked+label::after {
+
+        background: url("/files/98svg/radio-dot-disabled.svg");
+
+      }
+    }
+  }
+  &[type="checkbox"] {
+    &+label {
+
+      margin-left: var(--checkbox-total-width);
+      position: relative;
+
+      &::before {
+        background: @highlight-1;
+        box-shadow: @fieldborder;
+        content: "";
+        display: inline-block;
+        height: @boxwidth;
+        left: calc(-1 * (@checktotal-pre));
+        margin-right: @radiolabel-pxs;
+        position: absolute;
+        width: @boxwidth;
+
+      }
+    }
+
+    &:active+label::before {
+
+      background: @surface;
+
+    }
+
+    &:checked+label::after {
+
+      background: url("/files/98svg/checkmark.svg");
+      content: "";
+      display: block;
+      left: calc(-1 * (@checktotal-pre) + @markleft-pxs);
+      height: var(--checkmark-width);
+      position: absolute;
+      width: var(--checkmark-width);
+
+    }
+
+    &[disabled] {
+      &+label::before {
+
+        background: @surface;
+        
+      }
+
+      &:checked+label::after {
+
+        background: url("/files/98svg/checkmark-disabled.svg");
+
+      }
+    }
+  }
+
+  &[type="number"] {
+
+    /* need this 1 pixel to fit the spinner controls in box */
+
+    height: 22px;
+
+  } 
+
+  &[type="search"] {
+
+    /* clears the ‘X’ from internet explorer */
+
+    &::-ms-clear {
+
+      display: none;
+      height: 0;
+      width: 0;
+
+    }
+
+    &::-ms-reveal {
+      display: none;
+      height: 0;
+      width: 0;
+    }
+
+    /* clears the ‘X’ from chrome */
+
+    &::-webkit-search-decoration, &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button, &::-webkit-search-results-decoration {
+      
+      display: none;
+
+    }
+  }
+
+  &[type="text"], &[type="password"], &[type="email"], &[type="tel"], &[type="number"], &[type="search"] {
+
+    /* for some reason descenders are getting cut off without this */
+
+    line-height: 2;
+
+  }
+
+  &[type="range"] {
+
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    width: 100%;
+
+    &:focus {
+
+      outline: none;
+
+    }
+    &.has-box-indicator {
+      ::-webkit-slider-thumb {
+
+        background: url("/files/98svg/indicator-rectangle-horizontal.svg");
+        transform: translateY(-10px);
+
+      }
+
+      &::-moz-range-thumb {
+
+        background: url("/files/98svg/indicator-rectangle-horizontal.svg");
+        transform: translateY(0px);
+
+      }
+    }
+
+    &::-webkit-slider-thumb {
+
+      -webkit-appearance: none;
+      background: url("/files/98svg/indicator-horizontal.svg");
+      border: none;
+      box-shadow: none;
+      height: 21px;
+      transform: translateY(-8px);
+      width: 11px;
+
+    }
+
+    &::-moz-range-thumb {
+
+      background: url("/files/98svg/indicator-horizontal.svg");
+      border: 0;
+      border-radius: 0;
+      height: 21px;
+      transform: translateY(2px);
+      width: 11px;
+
+    }
+
+    &::-webkit-slider-runnable-track {
+
+      background: @text;
+      border-bottom: 1px solid @shadow-2;
+      border-right: 1px solid @shadow-2;
+      box-shadow:
+        1px 0 0 @highlight-1,
+        1px 1px 0 @highlight-1,
+        0 1px 0 @highlight-1,
+        -1px 0 0 @highlight-2,
+        -1px -1px 0 @highlight-2,
+        0 -1px 0 @highlight-2,
+        -1px 1px 0 @highlight-1,
+        1px -1px @highlight-2;
+      box-sizing: border-box;
+      height: 2px;
+      width: 100%;
+
+    }
+
+    &::-moz-range-track {
+
+      background: black; // edit later
+      border-bottom: 1px solid @shadow-2;
+      border-right: 1px solid @shadow-2;
+      box-shadow:
+        1px 0 0 @highlight-1,
+        1px 1px 0 @highlight-1,
+        0 1px 0 @highlight-1,
+        -1px 0 0 @highlight-2,
+        -1px -1px 0 @highlight-2,
+        0 -1px 0 @highlight-2,
+        -1px 1px 0 @highlight-1,
+        1px -1px @highlight-2;
+      box-sizing: border-box;
+      height: 2px;
+      width: 100%;
+
+    }
+  }
+}
+
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], select, textarea {
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: @sunken;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: @fieldborder;
+  padding: 3px 4px;
+
+}
+
+input[type="email"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], select {
+  
+  height: 21px;
+
+}
+
+input[type="email"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="email"]:read-only, input[type="number"]:read-only, input[type="password"]:read-only, input[type="search"]:read-only, input[type="tel"]:read-only, input[type="text"]:read-only, textarea:disabled {
+
+  background-color: @surface;
+
+}
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, select:focus, textarea:focus {
+
+  outline: none;
+
+}
+
+:disabled, :disabled+label, input[readonly], 
+input[readonly]+label {
+  color: @shadow-1;
+}
+
+label {
+  align-items: center;
+  display: inline-flex;
+}
+
+.field-row {
+
+  display: flex;
+  align-items: center;
+
+  &>*+* {
+
+    margin-left: @elemgroup-pxs;
+
+  }
+
+  &--stacked {
+
+    display: flex;
+    flex-direction: column;
+
+    & *+* {
+
+      margin-top: @elemgroup-pxs;
+
+    }
+  }
+}
+
+select {
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/files/98svg/button-down.svg");
+  background-position: top 2px right 2px;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding-right: 32px;
+  position: relative;
+
+  &:focus {
+
+    background-color: @active-tb1;
+    color: @highlight-1;
+
+    & option {
+      
+      background-color: @highlight-1;
+      color: @shadow-1;
+
+    }
+  }
+
+  &:active {
+
+    background-image: url("/files/98svg/button-down-active.svg");
+
+  }
+}
+
+.progress-indicator {
+
+  height: 32px;
+  position: relative;
+  box-shadow: @sunkeninner;
+  padding: 4px 4px;
+  border: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+
+  &>.progress-indicator-bar {
+
+    height: 100%;
+    display: block;
+    background-color: @active-tb1;
+
+  }
+
+  &.segmented>.progress-indicator-bar {
+
+    width: 100%;
+    background-color: transparent;
+
+    /* resets the background color which is set to "blue" in the non-segmented selector */
+
+    background-image: linear-gradient(90deg,
+                      @active-tb1 0 16px,
+                      transparent 0 2px);
+    background-repeat: repeat;
+    background-size: 18px 100%;
+  }
+}
+
+.is-vertical {
+
+  display: inline-block;
+  height: 150px;
+  transform: translateY(50%);
+  width: 4px;
+
+  &>input[type="range"] {
+
+    height: 4px;
+    margin: 0 calc(@elemgroup-pxs 
+            + @range-pxs) 
+            0 @range-pxs;
+    transform: rotate(270deg) 
+              translateX(calc
+              (-50% + @element-pxs));
+    transform-origin: left;
+    width: 150px;
+
+    &::-webkit-slider-runnable-track {
+
+      border-bottom: 1px solid @shadow-2;
+      border-left: 1px solid @shadow-2;
+      border-right: 0;
+      box-shadow:
+        -1px 0 0 @highlight-1,
+        -1px 1px 0 @highlight-1,
+        0 1px 0 @highlight-1,
+        1px 0 0 @highlight-2,
+        1px -1px 0 @highlight-2,
+        0 -1px 0 @highlight-2,
+        1px 1px 0 @highlight-1,
+        -1px -1px @highlight-2;
+
+    }
+
+    &::-moz-range-track {
+
+      border-left: 1px solid @shadow-2;
+      border-right: 0;
+      border-bottom: 1px solid @shadow-2;
+      box-shadow:
+        -1px 0 0 @highlight-1,
+        -1px 1px 0 @highlight-1,
+        0 1px 0 @highlight-1,
+        1px 0 0 @highlight-2,
+        1px -1px 0 @highlight-2,
+        0 -1px 0 @highlight-2,
+        1px 1px 0 @highlight-1,
+        -1px -1px @highlight-2;
+
+    }
+
+    &::-webkit-slider-thumb {
+
+      transform: translateY(-8px) scaleX(-1);
+
+    }
+
+    &.has-box-indicator::-webkit-slider-thumb {
+
+      transform: translateY(-10px) scaleX(-1);
+    
+    }
+
+    &::-moz-range-thumb {
+
+      transform: translateY(2px) scaleX(-1);
+
+    }
+
+    &.has-box-indicator::-moz-range-thumb {
+
+      transform: translateY(0px) scaleX(-1);
+      
+    }
+  }
+}

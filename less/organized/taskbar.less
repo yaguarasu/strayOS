@@ -1,0 +1,132 @@
+.taskbar {
+
+  /* children:                         *
+   * #start-toggle, #microblog-toggle, *
+   * #changelog-toggle, #return-home   */
+   
+   align-items: center;
+   background-color: @window;
+   bottom: 0;
+   box-shadow: @taskbarouter, @taskbarinner;
+   display: flex;
+   flex-flow: row nowrap;
+   font-family: @font[dos8x16];
+   height: 45px;
+   justify-content: left;
+   left: 0;
+   padding: 7px 6px 7px 5px;
+   position: absolute;
+   right: 0;
+   width: 100%;
+   z-index: 2;
+
+   .tooltip__container {
+
+    height: 100%;
+
+    &.top .tooltip {
+
+      top: -50px; 
+      left: -50px; 
+    
+    }
+  }
+
+}
+
+.taskbar__divider {
+  
+  width: 7px;
+  height: 100%;
+  margin: 0 5px;
+
+}
+
+#start-toggle {
+  img {
+
+    margin-left: -5px;
+    padding: 5.5px 0;
+
+  }
+}
+
+#return-home, #start-toggle {
+
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.75em;
+  height: 100%;
+  justify-content: left;
+
+  &:focus {
+
+    outline: none;
+
+  }
+
+  &:hover {
+
+    cursor: @crs-link;
+
+  }
+
+  &:active {
+    span {
+
+      color: transparent!important;
+      text-shadow: @active-tb2 1px 1px;
+
+    }
+
+    img {
+
+      translate: 2px 2px;
+
+    }
+  }
+}
+
+#return-home {
+
+  justify-content: center;
+  min-width: 0;
+  padding: 4px;
+
+  .tooltip {
+    
+    left: -90px;
+
+  }
+
+}
+
+.taskbar__icon {
+  
+  display: block;
+  height: 100%;
+  margin: 0;
+  width: min-content;
+
+  &>img {
+
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+
+  }
+
+  #start-toggle > & {
+
+    margin-right: 8px;
+
+    &+span {
+      
+      width: min-content;
+      display: block;
+      color: @active-tb2;
+    
+    }
+  }
+}

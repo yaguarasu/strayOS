@@ -1,0 +1,24 @@
+
+.status-bar {
+
+  margin: 3px;
+  display: flex;
+  gap: 2px;
+
+  &__field {
+
+    background-color: @window;
+    box-shadow:
+      inset -1px -1px @highlight-1,
+      inset 1px 1px @shadow-1,
+      inset -2px -2px @highlight-2,
+      inset 2px 2px @shadow-2;
+    color: @active-tb1;
+    flex-grow: 1;
+    font-size: 12px;
+    height: 18px;
+    margin: 0;
+    padding: 3px 4px;
+
+  }
+}

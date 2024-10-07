@@ -1,0 +1,41 @@
+table {
+
+  background-color: @text;
+  border-collapse: collapse;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+
+  &>thead>tr>* {
+
+    background: @surface;
+    box-shadow: @raisedouter, @raisedinner;
+    box-sizing: border-box;
+    font-weight: normal;
+    height: 17px;
+    padding: 0 @elemgroup-pxs;
+    position: sticky;
+    top: 0;
+
+  }
+
+  &.interactive>tbody>tr {
+
+    cursor: @crs-link;
+
+  }
+
+  &>tbody>tr.highlighted {
+
+    background-color: @active-tb1;
+    color: #fff;  // edit later
+
+  }
+
+  &>tbody>tr>* {
+
+    height: 14px;
+    padding: 0 @elemgroup-pxs;
+
+  }
+}

@@ -53,20 +53,13 @@ th {
   color: @text;
 }
 
-fieldset {
-  border-image: url("/files/98svg/groupbox-border.svg") 2;
-  padding: @fieldpadding;
-  padding-block-start: @element-pxs;
-  margin: 0;
+label {
+  display: inline-flex;
+  align-items: center;
 }
 
 legend {
   background: @surface;
-}
-
-label {
-  display: inline-flex;
-  align-items: center;
 }
 
 pre {
@@ -106,7 +99,7 @@ pre {
   padding: 2px;
 }
 
-::-webkit-scrollbar-corner {
+/*::-webkit-scrollbar-corner {
   background: @highlight-2;
 }
 
@@ -263,8 +256,7 @@ code, code * {
   background: @window;
   padding: 2px;
   &-body {
-    padding: 0 @element-pxs 0 @element-pxs;
-    //height: 100%;
+    padding: 2px @element-pxs 2px @element-pxs;
   }
   &[role="tabpanel"] {
     position: relative;
@@ -384,7 +376,7 @@ menu[role="tablist"] {
   button {
     top: 3px;
     background: @surface;
-    color: @active-tb2;
+    color: @inactive-tb1;
     box-shadow: inset 1px 1px @highlight-1, inset 2px 2px @highlight-2, inset -1px 0 @shadow-1, inset -2px 0 @shadow-2;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
@@ -393,6 +385,7 @@ menu[role="tablist"] {
     display: block;
     text-decoration: none;
     min-width: unset;
+    transition: .25s;
     padding: 3px 12px;
     &:active {
       text-shadow: @active-tb2;
@@ -409,7 +402,7 @@ menu[role="tablist"] {
       border-left: 1px solid @highlight-1;
       border-right: 1px solid @highlight-2;
     }
-    &[aria-selected="true"] {
+    &.active {
       top: 2px;
       margin-right: -1px;
       padding-bottom: 2px;
@@ -418,13 +411,24 @@ menu[role="tablist"] {
       position: relative;
       z-index: 8;
       margin-left: -3px;
+      color: @active-tb2;
       margin-bottom: 1px;
       &:first-of-type {
         left: 0;
       }
+      &:hover {
+        color: @active-tb2;
+      }
+    }
+    &:active {
+      &:extend(.outline-focus-offset);
     }
     &:focus {
-      &:extend(.outline-focus-offset);
+      outline: none;
+    }
+    &:hover {
+      color: @inactive-tb2;
+      transition: .25s;
     }
   }
   &.justified {
@@ -599,6 +603,7 @@ input {
   }
   &[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     background: transparent;
     &:focus {

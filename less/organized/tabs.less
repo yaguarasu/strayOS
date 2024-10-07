@@ -1,0 +1,141 @@
+menu[role="tablist"] {
+  
+  display: flex;
+  list-style-type: none;
+  margin: 0 0 -2px 0;
+  padding-left: 3px;
+  position: relative;
+  text-indent: 0;
+
+  button {
+    
+    background: @surface;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: inset 1px 1px @highlight-1,
+                inset 2px 2px @highlight-2,
+                inset -1px 0 @shadow-1,
+                inset -2px 0 @shadow-2;
+    color: @inactive-tb1;
+    display: block;
+    min-width: unset;
+    padding: 3px 12px;
+    text-decoration: none;
+    transition: .25s;
+    top: 3px;
+    z-index: 1;
+    
+    &:active {
+
+      color: transparent;
+      outline: 1.3px dashed @link;
+      outline-offset: -5px;
+      text-shadow: @active-tb2;
+
+      &:hover {
+        color: transparent;
+      }
+    
+    }
+
+    &:hover:not(.active) {
+
+      color: @inactive-tb2;
+      transition: .25s;
+
+    }
+
+    &:first-of-type::before {
+      
+      border-left: 1px solid @highlight-1;
+      border-right: 1px solid @highlight-2;
+      content: "";
+      display: block;
+      left: 0;
+      height: 2px;
+      position: absolute;
+      top: 100%;
+      width: 0;
+      z-index: -1;
+
+    }
+
+    &:focus {
+
+      outline: none;
+
+    }
+  }
+}
+
+menu[role="tablist"] button.active {
+  
+  color: @active-tb2;
+  background-color: @surface;
+  margin: -2px -1px 1px -3px;
+  padding-bottom: 2px;
+  position: relative;
+  top: 2px;
+  z-index: 8;
+
+  &:first-of-type {
+
+    left: 0;
+
+  }
+}
+
+[role="tablist"].justified {
+  button {
+
+    flex-grow: 1;
+    text-align: center;
+
+  }
+}
+
+[role="tabpanel"] {
+
+  background: @surface;
+  box-shadow: inset 1px 1px @highlight-1, 
+              inset 2px 2px @highlight-2, 
+              inset -1px -1px @shadow-1, 
+              inset -2px -2px @shadow-2;
+  clear: both;
+  margin-bottom: 9px;
+  padding: 14px;
+  position: relative;
+  z-index: 2;
+
+}
+
+.tab__group {
+
+  margin-top: 5px;
+
+}
+
+.tab__contents {
+
+  /* children: tab__panel */
+
+  .tab__panel {
+
+    display: none;
+
+    &.active {
+
+      display: block;
+
+    }
+
+    &--scroll {
+      
+      /* only child elements */
+
+      overflow-y: scroll;
+
+    }
+  }
+}

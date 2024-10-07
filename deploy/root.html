@@ -4,431 +4,545 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>sOS.iNTERFACE(ROOT_DiR)</title>
-    <link rel="icon" type="image/x-icon" href="/files/icons/strayOS.png">
+
+		<title>sOS.ROOT_DiR</title>
+
+    <link rel="icon" type="image/x-icon" href="/files/graphics/sOS_favicon.png">
 		<link rel="stylesheet" href="/files/css/style.css">
     <script src="/files/js/preloader.js"></script>
 	</head>
 	<body class="crt">
-    
+<!-- page start. -->
 
     <div id="preloader">
       <div class="loader_line"></div>
     </div>
 
     <div class="contain">
-<!--  PAGE START  -->
+<!--  primary content.  -->
+<!-- desktop icons. -->
+      <div class="desktop">
+        <a class="desktop__item"
+           href="/bios">
+          <div>
+            <img src="/files/icons/sOS_hardware.png">
+          </div>
+          <div>
+            system BIOS
+          </div>
+        </a>
+        <a class="desktop__item"
+           href="/logs">
+          <div>
+            <img src="/files/icons/sOS_notepad.png">
+          </div>
+          <div>
+            log entries
+          </div>
+        </a>
+        <a class="desktop__item"
+           href="/repository">
+          <div>
+            <img src="/files/icons/sOS_appwizard.png">
+          </div>
+          <div>
+            repositories
+          </div>
+        </a>
+        <a class="desktop__item"
+           href="/attributions">
+          <div>
+            <img src="/files/icons/sOS_directory-open.png">
+          </div>
+          <div>
+            attributions
+          </div>
+        </a>
+      </div>
+<!-- desktop icons end. -->
       <div class="main-wrapper">
-        <main class="shift-home">
-          <div class="window primary-page" id="home-page">
-            <div class="window-head">
+<!-- primary window bundle. -->
+        <div class="bundle
+                    bundle__root--01">
+<!-- primary window. -->
+          <div class="window 
+                      window--root 
+                      window--primary">
+            <div class="window__head">
               <div class="title-bar">
-                <div class="title-bar-text">
-                  sOS.iNTERFACE(ROOT_DiR)
+                <div class="title-bar__text">
+                  sOS.ROOT_DiR[01]
                 </div>
-                <div class="title-bar-controls">
+                <div class="title-bar__controls">
                   <button aria-label="Minimize"></button>
                   <button aria-label="Maximize"></button>
                   <button aria-label="Close"></button>
                 </div>
               </div>
             </div>
-            <div class="window-body">
-              <div class="window-scroll">
-                <div class="scroll-cn">
-                  <div class="tabgroup">
-                    <menu role="tablist">
-                      <li role="tab" class="tabtoggle active">
-                        <button data-id="tab1" aria-label="tab one (preface)">
-                          ${PREFACE}
-                        </button>
-                      </li>
-                      <li role="tab" class="tabtoggle">
-                        <button data-id="tab2" aria-label="tab two (buttons)">
-                          ${BUTTONS}
-                        </button>
-                      </li>
-                      <li role="tab" class="tabtoggle">
-                        <button data-id="tab3" aria-label="tab three (webrings)">
-                          ${WEBRiNGS}
-                        </button>
-                      </li>
-                    </menu>
-                    <article class="tabcontents">
-                      <section role="tabpanel" class="tabpanel active" id="tab1">
-                        <h1>preface.</h1>
-                        <p>
-                          welcome, user; you seem to have arrived to the living webspace that is this extension of <b>strayOS;</b> a computer operating system consisting of mismatched specifications. feel free to peruse, if one would like. 
-                        </p>
+            <div class="window__body">
+<!-- primary window tabs. -->
+              <div class="tab__group 
+                          tab__group--1">
+                <menu role="tablist">
+                  <li role="tab">
+                    <button data-id="tab1" class="tab__toggle 
+                                                  tab__toggle--1 active" 
+                            aria-label="tab one [preface]">
+                      ${PREFACE}
+                    </button>
+                  </li>
+                  <li role="tab">
+                    <button data-id="tab2" class="tab__toggle 
+                                                  tab__toggle--1" 
+                            aria-label="tab two [buttons]">
+                      ${BUTTONS}
+                    </button>
+                  </li>
+                  <li role="tab">
+                    <button data-id="tab3" class="tab__toggle 
+                                                  tab__toggle--1" 
+                            aria-label="tab three [webrings]">
+                      ${WEBRiNGS}
+                    </button>
+                  </li>
+                </menu>
+                <article class="tab__contents">
+<!-- primary window tab one. -->
+                  <section role="tabpanel" class="tab__panel
+                                                  tab__panel--1 active" id="tab1">
+                    <h1>preface.</h1>
+                    <p>
+                      welcome, user; you seem to have arrived to the living webspace that is this extension of <b>strayOS;</b> a computer operating system which, despite it consisting of mismatched specifications, continues to function. feel free to peruse, if one would like, for any page may be accessed by use of the start menu; however, desktop icons have been provided for ease-of-access to all respective categories' directory. 
+                    </p>
+                    <div class="flexroot">
+                      <div class="todo">
                         <hr>
-                        <div class="home-flex">
-                          <div>
-                            <div>
-                              <h1>directory.</h1>
-                              <div class="sunken-panel">
-                                <div class="directory-cn">
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/bios">
-                                        <div>
-                                          <img src="/files/icons/strayOS_hardware-1.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            system hardware
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/bios/components">
-                                        <div>
-                                          <img src="/files/icons/strayOS_ramdrive.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            hardware components
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/blog">
-                                        <div>
-                                          <img src="/files/icons/strayOS_win3.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            blog
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/logs/journals">
-                                        <div>
-                                          <img src="/files/icons/strayOS_signaturexcl.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            journals
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/repository/quotes">
-                                        <div>
-                                          <img src="/files/icons/strayOS_fileset.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            quote repository
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/repository/resources">
-                                        <div>
-                                          <img src="/files/icons/strayOS_pc-grad.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            resource repository
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div class="directory-item-cn">
-                                    <div class="directory-item sfx-ok">
-                                      <a href="/attributions">
-                                        <div>
-                                          <img src="/files/icons/strayOS_directory-2.png">
-                                        </div>
-                                        <div>
-                                          <p>
-                                            attributions
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="todo">
-                            <h1>queue.</h1>
-                            <div class="sunken-panel">
-                              <p>
-                                ATTRiBUTiONS(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip" style="left:-70px;">
-                                    of utmost priority.
-                                  </span></span>).<i>CREATE</i>;
-                              </p>
-                              <p>
-                                SYSTEM_BiOS(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip">
-                                    high priority.
-                                  </span></span>).<i>CREATE</i>(HARDWARE, COMPONENTS);
-                              </p>
-                              <p>
-                                BLOG(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip">
-                                    medium priority.
-                                  </span></span>).<i>CREATE</i>;
-                              </p>
-                              <p>
-                                LOGS(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip">
-                                    medium priority.
-                                  </span></span>).<i>CREATE</i>(JOURNALS);
-                              </p>
-                              <p>
-                                REPOSITORiES(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip">
-                                    low priority.
-                                  </span></span>).<i>CREATE</i>(QUOTES, RESOURCES);
-                              </p>
-                              <p>
-                                RESPONSiVENESS(<span class="tooltip-cn top">${!}
-                                  <span class="tooltip">
-                                    low priority.
-                                  </span></span>).<i>iMPLEMENT</i>;
-                              </p>
-                            </div>
-                          </div>
+                        <h1>queue.</h1>
+                        <div class="sunken-panel">
+                          <p>
+                            ATTRiBUTiONS(<span class="tooltip__container top">${!}
+                              <span class="tooltip" style="left:-70px;">
+                                of utmost priority.
+                              </span></span>).<i>CREATE</i>;
+                          </p>
+                          <p>
+                            SYSTEM_BiOS(<span class="tooltip__container top">${!}
+                              <span class="tooltip">
+                                high priority.
+                              </span></span>).<i>CREATE</i>(HARDWARE, COMPONENTS);
+                          </p>
+                          <p>
+                            BLOG(<span class="tooltip__container top">${!}
+                              <span class="tooltip">
+                                medium priority.
+                              </span></span>).<i>CREATE</i>;
+                          </p>
+                          <p>
+                            LOGS(<span class="tooltip__container top">${!}
+                              <span class="tooltip">
+                                medium priority.
+                              </span></span>).<i>CREATE</i>(JOURNALS);
+                          </p>
+                          <p>
+                            REPOSITORiES(<span class="tooltip__container top">${!}
+                              <span class="tooltip">
+                                low priority.
+                              </span></span>).<i>CREATE</i>(QUOTES, RESOURCES);
+                          </p>
+                          <p>
+                            RESPONSiVENESS(<span class="tooltip__container top">${!}
+                              <span class="tooltip">
+                                low priority.
+                              </span></span>).<i>iMPLEMENT</i>;
+                          </p>
                         </div>
-                      </section>
-                      <section role="tabpanel" class="tabpanel" id="tab2">
-                        <h1>buttons</h1>
-                        <p>
-                          this does not yet have any other webpages buttons. this is to be changed in due time. meanwhile, this does have its own button; if one wishes to include its button here, then one can do so.
-                        </p>
-                        <div class="sOS_btn-wrap">
-                          <div>
-                            <img src="/files/graphics/sOS_btn.gif" alt=""
-                              class="sOS_button">
-                            <pre>
-                              &lt;a href="https://strayos.nekoweb.org/" target="_blank"&gt;
-                              &lt;img src="https://strayos.nekoweb.org/files/graphics/sOS_btn.gif"&gt;
-                              &lt;/a&gt;
-                            </pre>
-                          </div>
-                          <div>
-                            <img src="/files/graphics/sOS_btn.png" alt=""
-                                class="sOS_button">
-                            <pre>
-                              &lt;a href="https://strayos.nekoweb.org/" target="_blank"&gt;
-                              &lt;img src="https://strayos.nekoweb.org/files/graphics/sOS_btn.png"&gt;
-                              &lt;/a&gt;
-                            </pre>
-                          </div>
+                      </div>
+                      <div class="decor">
+                        <div class="sunken-panel">
                         </div>
-                      </section>
-                      <section role="tabpanel" class="tabpanel" id="tab3">
-                        <h1>webrings.</h1>
-                        <div id="webrings">
-                          <div id="roboring">
-                            <a href="https://stellophiliac.github.io/roboring/5TR4Y/previous"><-</a><a href="https://stellophiliac.github.io/roboring">/roboring/</a><a href="https://stellophiliac.github.io/roboring/5TR4Y/next">-></a> 
-                          </div>
-                          <div>
-                            (processing)
-                          </div>
+                      </div>
+                    </div>
+                  </section>
+<!-- primary window tab one end. -->
+<!-- primary window tab two. -->
+                  <section role="tabpanel" class="tab__panel
+                                                  tab__panel--1" id="tab2">
+                    <h1>buttons</h1>
+                    <p>
+                      this does not yet have any other webpages buttons. this is to be changed in due time. meanwhile, this does have its own button; if one wishes to include its button here, then one can do so.
+                    </p>
+                    <div class="sOS__btn--wrap">
+                      <div>
+                        <img src="/files/graphics/sOS_btn.gif" alt=""
+                          class="sOS__button">
+                        <pre>
+                          &lt;a href="https://strayos.nekoweb.org/" target="_blank"&gt;
+                          &lt;img src="https://strayos.nekoweb.org/files/graphics/sOS_btn.gif"&gt;
+                          &lt;/a&gt;
+                        </pre>
+                      </div>
+                      <div>
+                        <img src="/files/graphics/sOS_btn.png" alt=""
+                            class="sOS__button">
+                        <pre>
+                          &lt;a href="https://strayos.nekoweb.org/" target="_blank"&gt;
+                          &lt;img src="https://strayos.nekoweb.org/files/graphics/sOS_btn.png"&gt;
+                          &lt;/a&gt;
+                        </pre>
+                      </div>
+                    </div>
+                  </section>
+<!-- primary window tab two end. -->
+<!-- primary window tab three. -->
+                  <section role="tabpanel" class="tab__panel
+                                                  tab__panel--1" id="tab3">
+                    <h1>webrings.</h1>
+                    <div id="webrings">
+                      <div style="display: flex;flex-flow: column;">
+                        <div id="roboring">
+                          <a href="https://stellophiliac.github.io/roboring/5TR4Y/previous"><-</a><a href="https://stellophiliac.github.io/roboring">/roboring/</a><a href="https://stellophiliac.github.io/roboring/5TR4Y/next">-></a> 
                         </div>
-                      </section>
-                    </article>
-                  </div>
-                </div>
+                        <div>
+                          (processing)
+                        </div>
+                      </div>
+                      <div id="noAI">
+                        <map name="noaimini5b">
+                          <area href="https://baccyflap.com/noai" shape="rect" coords="50,32,122,58" target="_blank" alt="no ai webring" title="no ai webring">
+                          <area href="https://baccyflap.com/noai/?prv&s=sos" target="_top" shape="rect" coords="4,4,38,34" alt="previous" title="previous">
+                          <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="132,44,140,56" alt="random" title="random">
+                          <area href="https://baccyflap.com/noai/?nxt&s=sos" target="_top" shape="rect" coords="138,4,170,34" alt="next" title="next">
+                        </map>
+                        <img style="width:176px;image-rendering:pixelated" usemap="#noaimini5b" src="https://baccyflap.com/noai/miniwidget5.gif" alt="the top of a fuzzy, black sphere with two arrows rising from it, one curving to the left, one to the right. across the bulk of the sphere it reads NO AI / WEBRING in squiggly, uneven letters and next to those words is a small question mark"> 
+                      </div>
+                      <div>
+                      </div>
+                    </div>
+                  </section>
+<!-- primary window tab three end. -->
+<!-- primary window tabs end. -->
+                </article>
               </div>
             </div>
-            <div class="status-bar" id="stats">
-              <div class="status-bar-field">
-                <span id="created"></span>
+            <div class="window__foot">
+<!-- site statistics. -->
+              <div class="status-bar site-stats">
+                <div class="status-bar__field">
+                  <span id="created"></span>
+                </div>
+                <div class="status-bar__field">
+                  <span id="updated"></span>
+                </div>
+                <div class="status-bar__field">
+                  <span id="visitors"></span>
+                </div>
+                <div class="status-bar__field">
+                  <span id="followers"></span>
+                </div>
+<!-- site statistics end. -->
+            <!--<div class="status-bar-field">
+              <a href="https://max.nekoweb.org/resources/nekoweb-stats"><i>code</i></a>.
+            </div> will be transferred to /attributions upon page addition-->
               </div>
-              <div class="status-bar-field">
-                <span id="updated"></span>
-              </div>
-              <div class="status-bar-field">
-                <span id="visitors"></span>
-              </div>
-              <div class="status-bar-field">
-                <span id="followers"></span>
-              </div>
-              <!--<div class="status-bar-field">
-                <a href="https://max.nekoweb.org/resources/nekoweb-stats"><i>code</i></a>.
-              </div> will be transferred to /attributions upon page addition-->
             </div>
           </div>
-
-          <div id="guestmsg" class="window">
-            <div class="window-head">
+<!-- primary window end. -->
+<!-- decorative window one. -->
+          <div class="window banner
+                      banner__coronet">
+            <div class="window__head">
               <div class="title-bar">
-                <div class="title-bar-text">
-                  sOS.TRANSMiSSiON()
+                <div class="title-bar__text">
+                  ${MT_CRNT}
                 </div>
-                <div class="title-bar-controls">
-                  <button aria-label="Help"></button>
-                </div>
-              </div>
-            </div>
-            <div class="window-body">
-              <p>
-                if desired, one may leave a mark of ones visit; it is known that humans and related species or automatons are fond of leaving behind proof of their being places.
-              </p>
-            </div>
-          </div>
-
-          <div id="guestbook" class="window">
-            <div class="window-head">
-              <div class="title-bar">
-                <div class="title-bar-text">
-                  sOS.PASSERBY(COMM)
-                </div>
-                <div class="title-bar-controls">
-                  <button aria-label="Close"></button>
-                </div>
-              </div>
-            </div>
-            <div class="window-body">
-              <iframe src="https://strayos.atabook.org"
-              frameborder="0"></iframe>
-            </div>
-          </div>
-          
-          <div class="window banner" id="saturn-png">
-            <div class="window-head">
-              <div class="title-bar">
-                <div class="title-bar-text">
-                  sOS.iNT...
-                </div>
-                <div class="title-bar-controls" alt="">
+                <div class="title-bar__controls" alt="">
                   <button aria-label="Minimize"></button>
                   <button aria-label="Maximize"></button>
                   <button aria-label="Close"></button>
                 </div>
               </div>
             </div>
-            <div class="window-body">
-              <img src="/files/banners/saturn.png" alt="">
-            </div>
-          </div>
-          <div class="window banner" id="coronet-png">
-            <div class="window-head">
-              <div class="title-bar">
-                <div class="title-bar-text">
-                  sOS.CMD(CTRL + SHiFT + R)
-                </div>
-                <div class="title-bar-controls" alt="">
-                  <button aria-label="Minimize"></button>
-                  <button aria-label="Maximize"></button>
-                  <button aria-label="Close"></button>
-                </div>
-              </div>
-            </div>
-            <div class="window-body">
+            <div class="window__body">
               <img src="/files/banners/pkmn-coronet.png" alt="">
             </div>
           </div>
-        </main>
+<!-- decorative window one end. -->
+        </div>
+<!-- primary window bundle end. -->
+<!-- secondary window bundle. -->
+        <div class="bundle
+                    bundle__root--02">
+<!-- secondary window. -->
+          <div class="window 
+                      window--root 
+                      window--secondary">
+            <div class="window__head">
+              <div class="title-bar">
+                <div class="title-bar__text">
+                  sOS.ROOT_DiR[02]
+                </div>
+                <div class="title-bar__controls">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="tab__group
+                          tab__group--2">
+<!-- secondary window tabs. -->
+                <menu role="tablist">
+                  <li role="tab">
+                    <button data-id="tab4" class="tab__toggle 
+                                                  tab__toggle--2 active" 
+                    aria-label="tab one [changelog]">
+                      ${UPDATES}
+                    </button>
+                  </li>
+                  <li role="tab">
+                    <button data-id="tab5" class="tab__toggle
+                                                  tab__toggle--2" 
+                    aria-label="tab two [microblog]">
+                      ${BiTBLOG}
+                    </button>
+                  </li>
+                  <li role="tab">
+                    <button data-id="tab6" class="tab__toggle 
+                                                  tab__toggle--2" 
+                    aria-label="tab three [guestbook]">
+                      ${GUESTLOG}
+                    </button>
+                  </li>
+                </menu>
+                <article class="tab__contents">
+<!-- secondary window tab one. -->
+                  <section role="tabpanel" class="tab__panel 
+                                                  tab__panel--2 active" id="tab4">
+                    <h1>changelog.</h1>
+                    <div class="sunken-panel
+                                briefpost__container">
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            changes: sitewide*.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-07">07oct</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>changes:</b> rewrote all css for the sake of organization; tweaked scripts; secondary window now holds changelog and microblog as well as the guestlog;<br>
+                            <b>additions:</b> desktop icon links, replacing old directory in primary window; new custom cursors;<br>
+                            <b>removals:</b> microblog and changelog in taskbar, for the sake of not bloating the scripts with innerHTML commands (<i>the start menu alone is enough for this</i>); primary window directory.
+                          </p>
+                          <p>
+                            * primarily /root. as that is most of the site currently.
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            changes: /root.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-02">02oct</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>changes:</b> reordered /root elements;<br>
+                            <b>additions:</b> couple new posts on the microblog.
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            changes: #taskbar.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-01">01oct</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>changes:</b> changelog and microblog can now be accessed site-wide via the taskbar, space made for other elements in /root.
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            changes: /root.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-09-30">30sept</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>additions:</b> queue (to-do list), directory (quick-links), slot for future webrings; all on /root.
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            new: /root.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-09-30">30sept</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>additions:</b> a homepage containing a changelog, guestbook, & microblog.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+<!-- secondary window tab one end. -->
+<!-- secondary window tab two. -->
+                  <section role="tabpanel" class="tab__panel 
+                                                  tab__panel--2" id="tab5">
+                    <h1>microblog.</h1>
+                    <div class="sunken-panel
+                                briefpost__container">
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            optimizations needed.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-01 03:54">02oct 4am</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            active updates may be put on hold; optimizations to code are much needed already, with the stylesheets and scripts a mess. it would rather be that this is gotten under control prior to continuing, please stand by.
+                          </p>
+                        </div>
+                        <br><hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            deploy2nekoweb.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-01 01:09">02oct 1am</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            successfully set up deploy2nekoweb; updates will be much more convenient to put out from here on out.
+                          </p>
+                        </div>
+                        <br><hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            setting up.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-09-30 16:28">30sept 4pm</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            going to be able to work on the rest of this site soon. finally finished with setting up the primary functions. it will be slow, however.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+<!-- secondary window tab two end. -->
+<!-- secondary window tab three. -->
+                  <section role="tabpanel" class="tab__panel 
+                                                  tab__panel--2" id="tab6">
+                    <h1>guestlog.</h1>
+                    <p>
+                      if desired, one may leave a mark of ones visit; it is known that humans and related species or automatons are fond of leaving behind proof of their being places.
+                    </p>
+                    <div class="guestlog">
+                      <iframe src="https://strayos.atabook.org"
+                      frameborder="0"></iframe>
+                    </div>
+                  </section>
+<!-- secondary window tab three end. -->
+                </article>
+<!-- secondary window tabs end. --> 
+              </div>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar__field">
+                <i>timezone</i>: utc-6.
+              </div>
+            </div>
+          </div>
+<!-- secondary window end. -->
+<!-- decorative window two. -->
+          <div class="window banner
+                      banner__saturn">
+            <div class="window__head">
+              <div class="title-bar">
+                <div class="title-bar__text">
+                  ${JPTR}
+                </div>
+                <div class="title-bar__controls" alt="">
+                  <button aria-label="Minimize"></button>
+                  <button aria-label="Maximize"></button>
+                  <button aria-label="Close"></button>
+                </div>
+              </div>
+            </div>
+            <div class="window__body">
+              <img src="/files/banners/jupiter.png" alt=""
+                   class="smooth">
+            </div>
+          </div>
+<!-- decorative window two end. -->
+        </div>
+<!-- secondary window bundle end. -->
       </div>
-      
+<!-- primary content end. -->
 
-      <div id="taskbar">
-        <button id="taskbar-start" type="button"
+<!-- taskbar. -->
+      <div class="taskbar">
+<!-- start button. -->
+        <button id="start-toggle" type="button"
                 aria-label="open start menu">
-          <span class="strayOS-i">
-            <img src="/files/icons/strayOS.png" alt="">
+          <span class="taskbar__icon">
+            <img src="/files/icons/sOS_logo-5.png" alt="">
           </span>
           <span>
             start
           </span>
         </button>
-        <div class="division window"></div>
-        <button id="start-changelog" type="button" class="sfx-ok"
-                aria-label="toggle changelog">
-          <div class="tooltip-cn top">
-            <span class="strayOS-i">
-              <img src="/files/icons/strayOS_odbc.png" alt="">
-            </span>
-            <span class="tooltip">
-              sOS<span class="pink">.</span>CHANGELOG <span class="pink">?</span> OPEN <span class="pink">:</span> CLOSE
-            </span>
-          </div>
-        </button>
-        <button id="start-microblog" type="button" class="sfx-ok"
-                aria-label="toggle microblog">
-          <div class="tooltip-cn top">
-            <span class="strayOS-i">
-              <img src="/files/icons/strayOS_infrared.png" alt="">
-            </span>
-            <span class="tooltip">
-              sOS<span class="pink">.</span>MiCROBLOG <span class="pink">?</span> OPEN <span class="pink">:</span> CLOSE
-            </span>
-          </div>
-        </button>
+<!-- start button end. -->
       </div>
-
-      <aside id="menu-cn" class="window"></aside>
-
-      <aside class="window" id="changelog">
-        <div class="window-head">
-          <div class="title-bar">
-            <div class="title-bar-text">
-              sOS.LOGS(CHANGELOG)
-            </div>
-            <div class="title-bar-controls">
-              <button aria-label="Help"></button>
-            </div>
-          </div>
-        </div>
-        <div class="window-body">
-          <div class="sunken-panel">
-            <div class="cl-cn" id="changelog-cn">
-            </div>
-          </div>
-        </div>
+<!-- taskbar end. -->
+<!-- start. -->
+      <aside id="startmenu" class="start window">
+        <!-- JS casts menu fill. -->
       </aside>
-
-      <aside class="window" id="microblog">
-        <div class="window-head">
-          <div class="title-bar">
-            <div class="title-bar-text">
-              sOS.LOGS(MiCROBLOG)
-            </div>
-            <div class="title-bar-controls">
-              <button aria-label="Help"></button>
-            </div>
-          </div>
-        </div>
-        <div class="window-body">
-          <div class="sunken-panel">
-            <div class="micro-cn" id="microblog-cn">
-              
-            </div>
-          </div>
-        </div>
-        <div class="status-bar">
-          <div class="status-bar-field">
-            <i>timezone</i>: utc-6.
-          </div>
-        </div>
-      </aside>
-
+<!-- start end. -->
     </div>
+<!-- page end. -->
+<!-- scripts. -->
     <script src="/files/js/taskbar.js"></script>
+    <script src="/files/js/script.js"></script>
     <script src="/files/js/global.js"></script>
+<!-- scripts end. -->
 	</body>
 </html>

@@ -1,0 +1,270 @@
+::selection, ::-moz-selection {
+
+  color: @active-tb2;
+  background-color: @backdrop;
+
+}
+
+::-webkit-scrollbar {
+
+  cursor: @crs-link;
+
+}
+
+:root, html {
+
+  font-size: 16px;
+
+}
+
+body {
+
+  background-color: @backdrop;
+  background-image: @bgp;
+  background-repeat: no-repeat;
+  color: @text;
+
+  cursor: @crs-default;
+
+  font-family: @font[dog];
+  font-size: .75rem;
+
+  overflow: hidden;
+  
+  scrollbar-color: darken(@text, 15%) @window;
+  scrollbar-gutter: stable;
+
+}
+
+a {
+
+  color: @link;
+  text-decoration-style: wavy;
+  transition: .5s;
+
+  &:hover {
+
+    color: @hover;
+    transition: .5s;
+
+  }
+}
+
+button, label[for|=range], table, .status-bar__field, .tree-view {
+  
+  font-family: @font[dos8x16];
+
+}
+
+code, code * {
+
+  font-family: monospace;
+
+}
+
+h1 {
+  color: @active-tb2;
+  font-family: @font[alkhem];
+  font-size: 2rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: underline solid 3px @active-tb1;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.375rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+hr {
+
+  border-color: @active-tb1;
+  justify-self: center;
+  text-align: center;
+  width: 75%;
+
+}
+
+img {
+
+  image-rendering: pixelated;
+
+} 
+
+img, .start__content .entry, .title-bar__text {
+
+  user-select: none;
+
+}
+
+label, input, legend, textarea, select, option, table, ul.tree-view, li[role="tab"] {
+
+  -webkit-font-smoothing: none;
+  font-size: .75rem;
+
+}
+
+legend {
+
+  background: @surface;
+
+}
+
+p {
+
+  line-height: 15px;
+  text-align: justify;
+
+}
+
+p, .window__body {
+
+  font-size: 0.5875rem;
+
+}
+
+pre {
+
+  color: @sunkentext;
+  background: @sunken;
+  box-shadow: @fieldborder;
+  display: block;
+  font-family: @font[dos8x16];
+  padding: 8px 8px;
+  white-space: collapse;
+  width: 200px;
+
+}
+
+summary:focus {
+
+	outline: 1.3px dashed @link;
+
+}
+
+table, .sunken-panel, .tree-view, .window {
+
+  margin: @element-pxs;
+
+}
+
+table, .tree-view {
+
+  color: @backdrop;
+
+}
+
+u {
+
+  text-decoration-color: @link;
+  text-underline-offset: 3px;
+
+}
+
+.contain {
+
+  align-items: center;
+  cursor: inherit;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  justify-content: center;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+}
+
+.sunken-panel {
+
+  background-color: @active-tb1;
+  box-shadow: @sunkenouter, @sunkeninner;
+  box-sizing: border-box;
+  color: @backdrop;
+  overflow: auto;
+  padding: 2px;
+
+}
+
+/*--------------------*
+ *    CRT mimicry     *
+ *--------------------*/
+.crt { /* applied to body */
+
+  animation: textShadow 1.6s infinite;
+
+  &::before {
+
+    background-image: url(/files/crt.png);
+    background-repeat: repeat;
+    bottom: 0;
+    content: " ";
+    display: block;
+    left: 0;
+    mix-blend-mode: multiply;
+    opacity: .3;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+
+  }
+}
+
+/*--------------------*
+ * set custom cursors *
+ *    for elements    *
+ *--------------------*/
+ a, button, input[type="reset"]:not(:disabled), input[type="submit"]:not(:disabled) {
+  &:hover {
+
+    cursor: @crs-link;
+
+  }
+  * {
+
+    cursor: inherit;
+
+  }
+ }
+
+.tooltip__container {
+  &:hover {
+
+    cursor: @crs-help;
+
+  }
+
+  * {
+
+    cursor: inherit;
+
+  }
+ }
+
+ #preloader {
+
+  cursor: @crs-load;
+
+ }

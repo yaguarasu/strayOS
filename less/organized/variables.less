@@ -1,0 +1,107 @@
+// ---- COLORS
+@text: #88b6ae; // body text
+@link: #ae89b7; // links
+@hover: #9042a5; // link hover
+
+@surface: #340c4f; // tab/button
+@window: #2c0b42; // window
+@backdrop: #0c031c; // body
+
+@highlight-1: #56158f; // highlight 01
+@shadow-1: #120816; // shadow 01
+@highlight-2: #410066; // highlight 02
+@shadow-2: #240a30; // shadow 02
+
+@active-tb1: #147c6d; // active dialog/window titlebar
+@active-tb2: #33c79a; // active dialog/window titlebar
+@inactive-tb2: #586f73; // inactive dialog/window titlebar
+@inactive-tb1: #91b09d; // inactive dialog/window titlebar
+
+@pattern: #3d1353;
+@sunken: @active-tb1; // sunken field
+@sunkentext: @backdrop; // sunken field text
+
+@bgp: url(/files/circuitboard.png); // background pattern
+
+// ---- SPACING
+@element-pxs: 8px; // element spacing
+@elemgroup-pxs: 6px; // grouped element spacing
+
+// ---------- buttons
+@btngroup-pxs: 4px; // grouped button spacing
+
+// ---------- radios
+@radiowidth: 12px; // radio width
+@radiolabel-pxs: 6px; // radio label spacing
+@dotwidth: 4px; // radio dot width
+
+// ---------- checkboxes
+@boxwidth: 13px; // checkbox width
+@markwidth: 7px; // checkmark width
+@markleft-pxs: 3px; // checkmark left
+
+// ---------- ranges
+@rangeheight: 4px; // range track height
+@range-pxs: 10px; // range spacing
+
+// ---- CALCS
+// ---------- radio calcs
+@radiototal-pre: @radiowidth + @radiolabel-pxs; // radio total width, precalc
+@radiototal: calc(@radiototal-pre); // radio total width, calc
+@radioleft: calc(-1 * @radiototal-pre); // radio left, calc
+@rdot-top: calc(@radiowidth / 2 - @dotwidth / 2); // radio dot top, calc
+@rdot-left: calc(-1 * (@radiototal-pre) + @radiowidth / 2 - @dotwidth / 2); // radio dot left, calc
+
+// ---------- checkbox calcs
+@checktotal-pre: @boxwidth + @radiolabel-pxs; // checkbox total width, precalc
+@checktotal: calc(@checktotal-pre); // checkbox total width, calc
+@checkleft: calc(-1 * @checktotal-pre); // checkbox left, calc
+
+// ---------- field calcs
+@fieldpadding-pre: 2 * @borderwidth + @element-pxs; // field padding, precalc
+@fieldpadding: calc(@fieldpadding-pre); // field padding, calc
+
+// ---- BORDERS
+@borderwidth: 1px; // border width
+@raisedouter: inset -1px -1px @shadow-1, inset 1px 1px @highlight-1; // raised outer border
+@raisedinner: inset -2px -2px @shadow-2, inset 2px 2px @highlight-2; // raised inner border
+@sunkenouter: inset -1px -1px @highlight-1, inset 1px 1px @shadow-1; // sunken outer border
+@sunkeninner: inset -2px -2px @highlight-2, inset 2px 2px @shadow-2; // sunken inner border
+
+// ---------- buttons
+@raisedouter-btn: inset -2px -2px @shadow-1, inset 1px 1px @shadow-1; // default raised button outer border
+@raisedinner-btn: inset 2px 2px @highlight-1, inset -3px -3px @shadow-2, inset 3px 3px @highlight-2; // default raised button inner border
+@sunkenouter-btn: inset 2px 2px @shadow-1, inset -1px -1px @shadow-1; // default sunken button outer border
+@sunkeninner-btn: inset -2px -2px @highlight-1, inset 3px 3px @shadow-2, inset -3px -3px @highlight-2; // default sunken button inner border
+
+// ---------- windows
+@windowouter: inset -1px -1px @shadow-1, inset 1px 1px @highlight-2; // outer window border
+@windowinner: inset -2px -2px @shadow-2, inset 2px 2px @highlight-1; // inner window border
+
+// ---------- fields
+@fieldborder: inset -1px -1px @highlight-1, inset 1px 1px @shadow-2, inset -2px -2px @highlight-2, inset 2px 2px @shadow-1; // field border
+
+// ---------- tabs
+@tabborder: inset -1px 0 @shadow-1, inset 1px 1px @highlight-2, inset -2px 0 @shadow-2, inset 2px 2px @highlight-1; // tab border
+
+// ---------- taskbar
+@taskbarouter: inset 0 1px 0 0 @highlight-1;
+@taskbarinner: inset 0 2px 0 0  @highlight-2;
+
+// ---- CURSORS
+@crs-default: url(/files/cursors/pointer.png), default;
+@crs-link: url(/files/cursors/select.png), pointer;
+@crs-txt: url(/files/cursors/text.png), text;
+@crs-unavailable: url(/files/cursors/forbidden.png), not-allowed;
+@crs-help: url(/files/cursors/question.png), help;
+@crs-load: url(/files/cursors/hourglass.png), wait;
+
+// ---- FONTS
+@font: {
+  alkhem: "Alkhemikal";
+  awful: "Awfully Digital";
+  dog: "Dogica Pixel";
+  dog-b: "Dogica Pixel Bold";
+  kiwi: "Kiwi Soda";
+  dos8x16: "Modern DOS 8x16";
+}
