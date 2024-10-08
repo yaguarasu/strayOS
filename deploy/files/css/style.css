@@ -285,6 +285,9 @@ pre {
   white-space: collapse;
   width: 200px;
 }
+s {
+  color: #68a398;
+}
 summary:focus {
   outline: 1.3px dashed #ae89b7;
 }
@@ -329,6 +332,9 @@ ul {
   color: #8dcfb3;
   overflow: auto;
   padding: 2px;
+}
+.sunken-panel s {
+  color: #55a181;
 }
 /*--------------------*
  *    CRT mimicry     *
