@@ -97,19 +97,3 @@ if (tabsTwo) {
     }
   }
 }
-
-// --------- SCROLLBOX ANCHORS!
-/*const attrBox = document.getElementById("attr__box");
-
-if (attrBox) {
-  const attrScroll = document.getElementsByClassName("attr--scroll");
-
-  attrScroll.addEventListener("click", e => {
-    e.preventDefault();
-    let target; target = attrScroll.hash
-    target.scrollIntoView({
-      alignToTop: "true",
-      behavior: "smooth",
-    });
-  });
-}*/
