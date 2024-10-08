@@ -104,7 +104,6 @@
           width: 170px;
 
         }
-
       }
 
       > div.todo {
@@ -135,6 +134,7 @@
       
     }
   }
+
   &--root.window--secondary {
 
     left: -10px;
@@ -218,7 +218,7 @@
     color: @text;
     display: flex;
     flex-flow: column;
-    font-family: @font[dos8x16];
+    font-family: @font[dos];
     justify-content: center;
     margin: 10px 5px 10px 5px;
     position: relative;
@@ -254,9 +254,88 @@
         @bg: hsl(162, 59%, 49%);
 
       }
-
     }
   }
+}
+
+/*--------------------------------*
+ *         /attributions.         *
+ *--------------------------------*/
+.window {
+  &--attr.window--primary {
+
+    top: -65px;
+
+    h1 ~ p {
+
+      margin-left: 20px;
+      margin-right: 20px;
+
+    }
+
+    .window__body {
+      
+      height: calc(100% - (22px + 18px + 12px));
+      overflow-y: hidden;
+
+      article {
+
+        height: 100%;
+        overflow-y: scroll;
+        padding: 10px;
+        scroll-behavior: smooth;
+        
+      }
+    }
+  }
+
+  &--attr.window--secondary {
+    
+    height: 275px;
+    left: 20px;
+    width: 215px;
+
+  }
+}
+
+.attr__fonts {
+
+  vertical-align: middle;
+
+}
+
+.alkhem {
+
+  font-family: @font[alkhem];
+  font-size: 1.2rem;
+
+}
+
+.awful {
+
+  font-family: @font[awful];
+  font-size: 1.05rem;
+
+}
+
+.dog {
+
+  font-size: .825rem;
+
+}
+
+.kiwi {
+
+  font-family: @font[kiwi];
+  font-size: 1.15rem;
+
+}
+
+.dos {
+
+  font-family: @font[dos];
+  font-size: 1.05rem;
+
 }
 
 /*--------------------------------*

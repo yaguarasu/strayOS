@@ -3,6 +3,7 @@
   display: inline-block;
   position: relative;
   text-decoration: 2px dotted underline @link;
+  text-indent: 0;
   text-underline-offset: 5px;
   transition: all 0.3s ease-in-out;
   z-index: 9;
@@ -11,6 +12,12 @@
 
     text-decoration: 1px dotted underline @backdrop;
     transition: all 0.3s ease-in-out;
+
+    .sunken-panel &, .tree-view & {
+
+      text-decoration-color: @active-tb2;
+
+    }
 
   }
 
@@ -30,14 +37,14 @@
     left: -25%;
     border-radius: 2px;
     font-size: 14px;
-    font-family: @font[dos8x16];
+    font-family: @font[dos];
     transform: translateY(9px);
     transition: all 0.3s ease-in-out;
     z-index: 999;
 
   }
 
-  &:hover .tooltip{
+  &:hover .tooltip {
 
     animation: hoverOS 1s 
                 ease-in-out 

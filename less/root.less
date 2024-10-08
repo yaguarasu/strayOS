@@ -27,9 +27,7 @@ body {
   cursor: @crs-default;
 
   font-family: @font[dog];
-  font-size: .75rem;
-
-  overflow: hidden;
+  font-size: .77rem;
   
   scrollbar-color: darken(@text, 15%) @window;
   scrollbar-gutter: stable;
@@ -40,11 +38,14 @@ a {
 
   color: @link;
   text-decoration-style: wavy;
+  text-underline-offset: 2px;
   transition: .5s;
 
   &:hover {
 
     color: @hover;
+    font-style: italic;
+    text-underline-offset: 3px;
     transition: .5s;
 
   }
@@ -52,7 +53,7 @@ a {
 
 button, label[for|=range], table, .status-bar__field, .tree-view {
   
-  font-family: @font[dos8x16];
+  font-family: @font[dos];
 
 }
 
@@ -62,34 +63,67 @@ code, code * {
 
 }
 
-h1 {
-  color: @active-tb2;
-  font-family: @font[alkhem];
-  font-size: 2rem;
-  margin-bottom: 5px;
-  margin-top: 10px;
+h1, h2, h3 {
+
   text-align: center;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-family: @font[alkhem];
+
+}
+
+h2, h3, h4, h5, h6 {
+
+  color: darken(@active-tb2, 5%);
+  text-decoration: underline solid 2px darken(@active-tb1, 5%);
+  text-underline-offset: 2.5px;
+
+}
+
+h1 {
+
+  color: @active-tb2;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-decoration: underline solid 3px @active-tb1;
+
 }
 
 h2 {
-  font-size: 1.75rem;
+
+  font-size: 1.625rem;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  translate: -75px 0;
+
 }
 
 h3 {
+
   font-size: 1.625rem;
+
 }
 
 h4 {
+
   font-size: 1.5rem;
+
 }
 
 h5 {
+
   font-size: 1.375rem;
+
 }
 
 h6 {
+
   font-size: 1.25rem;
+
 }
 
 hr {
@@ -126,10 +160,33 @@ legend {
 
 }
 
+ul:not(.tree-view) li {
+
+  list-style: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  &::before {
+
+    color: @active-tb2;
+    content: "⛧";
+    font-weight: bold;
+    margin-right: 10px;
+
+  }
+}
+
 p {
 
-  line-height: 15px;
+  line-height: 18px;
   text-align: justify;
+  text-indent: 10px;
+
+}
+
+p + section:has(h1) > h1, section:not([role="tabpanel"]):has(p:last-child) + section:not([role="tabpanel"]):has(h1) > &:first-of-type {
+
+  margin-top: 20px;
 
 }
 
@@ -145,7 +202,7 @@ pre {
   background: @sunken;
   box-shadow: @fieldborder;
   display: block;
-  font-family: @font[dos8x16];
+  font-family: @font[dos];
   padding: 8px 8px;
   white-space: collapse;
   width: 200px;
@@ -177,6 +234,13 @@ u {
 
 }
 
+ul {
+
+  margin-bottom: 15px;
+  margin-top: 10px;
+
+}
+
 .contain {
 
   align-items: center;
@@ -187,6 +251,7 @@ u {
   justify-content: center;
   left: 50%;
   margin: 0;
+  overflow: clip;
   position: absolute;
   top: 50%;
   -ms-transform: translate(-50%, -50%);
@@ -197,10 +262,10 @@ u {
 
 .sunken-panel {
 
-  background-color: @active-tb1;
+  background-color: @sunken;
   box-shadow: @sunkenouter, @sunkeninner;
   box-sizing: border-box;
-  color: @backdrop;
+  color: @sunkentext;
   overflow: auto;
   padding: 2px;
 

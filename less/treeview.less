@@ -4,8 +4,9 @@ ul.tree-view {
   background: @sunken;
   box-shadow: @fieldborder;
   display: block;
+  font-size: .95rem;
   margin: 0;
-  padding: 6px;
+  padding: 6px 12px;
 
   li {
 
@@ -15,13 +16,15 @@ ul.tree-view {
 
   a {
 
-    color: @text;
+    color: @sunkentext;
     text-decoration: none;
+    transition: .5s;
 
-    &:focus {
+    &:hover {
 
-      background-color: @active-tb1;
-      color: @highlight-1;
+      text-decoration: 1px wavy underline saturate(@sunkentext, 10%);
+      text-underline-offset: 2px;
+      transition: .5s;
 
     }
   } 
@@ -36,7 +39,7 @@ ul.tree-view {
 
     /* goes down too far */
 
-    border-left: 1.4px dashed @active-tb1;
+    border-left: 1.4px dashed @active-tb2;
     margin-left: 16px;
     padding-left: 16px;
 
@@ -46,7 +49,7 @@ ul.tree-view {
 
       &::before {
 
-        border-bottom: 1.4px dashed @active-tb1;
+        border-bottom: 1.4px dashed @active-tb2;
         content: "";
         display: block;
         left: -16px;
@@ -60,7 +63,7 @@ ul.tree-view {
 
       &:last-child::after {
 
-        background: @text;
+        background: @sunken;
         bottom: 0px;
         content: "";
         display: block;
@@ -93,7 +96,7 @@ ul.tree-view {
     &>summary:before {
 
       background-color: @sunken;
-      border: 1px solid @active-tb1;
+      border: 1px solid @active-tb2;
       content: "+";
       display: block;
       float: left;

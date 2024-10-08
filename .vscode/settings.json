@@ -5,4 +5,5 @@
     "relativeUrls": true
   },
   "livePreview.serverRoot": "deploy/",
+  "livePreview.customExternalBrowser": "Firefox"
 }
