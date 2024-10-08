@@ -886,7 +886,7 @@ select:active {
   filter: hue-rotate(280deg) contrast(350%);
 }
 /*--------------------*
- *      webrings      *
+ *      buttons       *
  *--------------------*/
 .sOS__button {
   width: 88px;
@@ -902,6 +902,9 @@ select:active {
   flex-flow: column;
   align-items: center;
   margin: 4px;
+}
+.nekoweb-button {
+  filter: hue-rotate(158deg) contrast(350%);
 }
 /*--------------------------------*
  *           brief post.          *
@@ -1910,6 +1913,18 @@ button:active [aria-label="Close"] {
   background-color: hsla(162, 59%, 49%, 0.45);
   color: #0c031c;
   outline: 1.3px dashed #ae89b7;
+}
+.button-display {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.button-display__sect {
+  display: flex;
+  flex-basis: 50%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 15px;
+  padding: 10px;
 }
 /*--------------------------------*
  *         /attributions.         *
