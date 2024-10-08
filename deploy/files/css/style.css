@@ -858,6 +858,16 @@ select:active {
   height: auto;
   width: 200px;
 }
+.banner__XXXX {
+  animation: floater 3s ease-in-out infinite;
+  left: 80px;
+  top: -55px;
+  z-index: -2;
+}
+.banner__XXXX img {
+  height: auto;
+  width: auto;
+}
 /*--------------------*
  *      webrings      *
  *--------------------*/
@@ -985,16 +995,16 @@ select:active {
   position: relative;
 }
 .bundle__root,
-.bundle__attr {
+.bundle__bios {
   /*     bundles for /root     */
 }
 .bundle__root--01,
-.bundle__attr--01 {
+.bundle__bios--01 {
   bottom: 230px;
   left: -460px;
 }
 .bundle__root--02,
-.bundle__attr--02 {
+.bundle__bios--02 {
   bottom: 265px;
   left: 250px;
 }
@@ -1617,10 +1627,10 @@ ul.tree-view details > summary::-webkit-details-marker {
 .window__body {
   padding: 2px 8px 2px 8px;
 }
-.window__body--scroll {
-  /* either child element, *
-       * or same element       */
-  overflow-y: scroll;
+.window.window--primary .window__body,
+.window.window--secondary .window__body,
+.window.window--avatar .window__body {
+  height: calc(100% - (22px + 18px + 12px));
 }
 .window[role="tabpanel"] {
   position: relative;
@@ -1885,6 +1895,7 @@ button:active [aria-label="Close"] {
   position: absolute;
   top: 0;
   width: 250px;
+  z-index: -3;
 }
 .desktop__item {
   color: #88b6ae;
@@ -1937,7 +1948,6 @@ button:active [aria-label="Close"] {
   margin-right: 20px;
 }
 .window--attr.window--primary .window__body {
-  height: calc(100% - (22px + 18px + 12px));
   overflow-y: hidden;
 }
 .window--attr.window--primary .window__body article {
@@ -1972,6 +1982,22 @@ button:active [aria-label="Close"] {
 .dos {
   font-family: "Modern DOS 8x16";
   font-size: 1.05rem;
+}
+/*--------------------------------*
+ *             /bios.             *
+ *         any component.         *
+ *--------------------------------*/
+.window--bios.window--primary {
+  top: -35px;
+}
+.window--bios.window--secondary {
+  left: -10px;
+}
+.window--bios.window--avatar {
+  animation: floater 3s ease-in-out infinite;
+  left: 450px;
+  position: absolute;
+  top: -72px;
 }
 /*--------------------------------*
  *           /not_found.          *

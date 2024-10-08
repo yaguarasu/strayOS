@@ -212,6 +212,7 @@
   position: absolute;
   top: 0;
   width: 250px;
+  z-index: -3;
 
   &__item {
 
@@ -292,7 +293,6 @@
 
     .window__body {
       
-      height: calc(100% - (22px + 18px + 12px));
       overflow-y: hidden;
 
       article {
@@ -356,6 +356,35 @@
 }
 
 /*--------------------------------*
+ *             /bios.             *
+ *         any component.         *
+ *--------------------------------*/
+.window {
+  &--bios.window--primary {
+
+    top: -35px;
+
+  }
+
+  &--bios.window--secondary {
+
+    left: -10px;
+
+  }
+
+  &--bios.window--avatar {
+
+    animation: @floater;
+    left: 450px;
+    position: absolute;
+    top: -72px;
+
+  }
+
+}
+
+
+/*--------------------------------*
  *           /not_found.          *
  *--------------------------------*/
  .window--not-found {
@@ -366,3 +395,4 @@
   top: -50px;
 
  }
+ 

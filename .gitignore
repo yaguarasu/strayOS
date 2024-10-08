@@ -1,8 +1,5 @@
-# anything which is not ready
-repository/
-logs/
-blog/
-bios/
-attributions/
-root/
+# just saved bits of HTML. unneeded.
 snippets/
+
+# not ready.
+deploy/bios/

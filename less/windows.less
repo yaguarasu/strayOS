@@ -8,13 +8,13 @@
 
     padding: 2px @element-pxs 2px @element-pxs;
 
-    &--scroll {
+  }
 
-      /* either child element, *
-       * or same element       */
-
-      overflow-y: scroll;
-
+  &.window--primary, &.window--secondary, &.window--avatar {
+    .window__body {
+      
+      height: calc(100% - (22px + 18px + 12px));
+    
     }
   }
 

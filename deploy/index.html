@@ -77,12 +77,18 @@
             </div>
             <div class="window__body">
               <div class="btns">
-                  <button class="sfx-ok" onclick="location.href='/root'" type="button">
+                  <button class="sfx-ok" 
+                          href="/root"
+                          onclick="location.href='/root'" 
+                          type="button">
                     <span>
                       i accept.
                     </span>
                   </button>
-                  <button class="sfx-ok" onclick="location.href='https://nekoweb.org'" type="button">
+                  <button class="sfx-ok" 
+                          href="https://nekoweb.org"
+                          onclick="location.href='https://nekoweb.org'"
+                          type="button">
                     <span>
                       i do not.
                     </span>
@@ -133,8 +139,9 @@
               </div>
             </div>
             <div class="window__body">
-              <img class="smooth"
-                  src="/files/banners/pkmn-rayquaza.png" alt="">
+              <img alt="an image of rayquaza from the pokémon emerald story cutscene between the three respective hoenn box legendary pokémon." 
+                   class="smooth"
+                   src="/files/banners/pkmn-rayquaza.png">
             </div>
           </div>
           <div class="banner window
@@ -152,7 +159,8 @@
               </div>
             </div>
             <div class="window__body">
-              <img src="/files/banners/discretion.png" alt="">
+              <img alt="an image of a viewer discretion message; it says, &quot;the following film contains graphic violence and material that may not be suitable for younger viewers. parental discretion is advised.&quot;"
+                   src="/files/banners/discretion.png">
             </div>
           </div>
           <div class="banner window
@@ -160,7 +168,7 @@
             <div class="window__head">
               <div class="title-bar">
                 <div class="title-bar__text">
-                  ${BRKNSCRN}
+                  ${BRKN_SCRN}
                 </div>
                 <div class="title-bar__controls">
                   <button aria-label="Minimize"></button>
@@ -170,7 +178,9 @@
               </div>
             </div>
             <div class="window__body">
-              <img src="/files/banners/broken-screen.png" alt="">
+              <img alt="an image of a cracked device screen."
+                   class="smooth" 
+                   src="/files/banners/broken-screen.png">
             </div>
           </div>
         </main>
@@ -179,14 +189,16 @@
       <div class="taskbar">
         <button id="start-toggle" type="button">
           <span class="taskbar__icon">
-            <img src="/files/icons/sOS_logo-5.png" alt="">
+            <img alt=""
+                 src="/files/icons/sOS_logo-5.png">
           </span>
           <span>
             start
           </span>
         </button>
       </div>
-      <aside id="startmenu" class="start window discretion--page"></aside>
+      <aside id="startmenu" 
+             class="start window discretion--page"></aside>
       
     </div>
     <script src="/files/js/taskbar.js"></script>
