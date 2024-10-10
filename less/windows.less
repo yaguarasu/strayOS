@@ -10,10 +10,18 @@
 
   }
 
-  &.window--primary, &.window--secondary, &.window--avatar {
+  &.window--primary, &.window--secondary, &.window--avatar, &.window--flags {
     .window__body {
       
       height: calc(100% - (22px + 18px + 12px));
+    
+    }
+  }
+
+  &.window--flags {
+    .window__body {
+      
+      height: calc(100% - (22px + 18px + 18px));
     
     }
   }

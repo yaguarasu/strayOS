@@ -99,6 +99,9 @@
                   <p>
                     <a href="https://codepen.io/iamwebrock/pen/VwRMrqN" target="_blank">preloader</a> by iamwebrock. <a href="https://max.nekoweb.org/resources/nekoweb-stats" target="_blank">site statistics</a> are displayed using max's javascript code. <a href="https://codepen.io/Fikri-Code/pen/GRZgOWo" target="_blank">tab-toggling</a> functionality by fikri-code.
                   </p>
+                  <p>
+                    tooltips created using <a href="https://atomiks.github.io/tippyjs/">tippy.js</a>.
+                  </p>
                 </section>
 <!-- code attributions end. -->
 <!-- image attributions. -->
@@ -346,14 +349,9 @@
                 type="button" 
                 onclick="location.href='/root'"
                 aria-label="return to home page">
-          <div class="tooltip__container top">
-            <span class="taskbar__icon">
-              <img src="/files/icons/sOS_console.png" alt="">
-            </span>
-            <span class="tooltip">
-              sOS<span class="pink">.</span>LOCATiON<span class="pink">.</span>HREF=<span class="pink">"/ROOT"</span>
-            </span>
-          </div>
+          <span class="taskbar__icon">
+            <img src="/files/icons/sOS_console.png" alt="">
+          </span>
         </button>
 <!-- home button end. -->
       </div>
@@ -366,6 +364,9 @@
     </div>
 <!-- page end. -->
 <!-- scripts. -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/files/js/tooltips.js"></script>
     <script src="/files/js/taskbar.js"></script>
     <script src="/files/js/script.js"></script>
     <script src="/files/js/global.js"></script>

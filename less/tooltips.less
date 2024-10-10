@@ -1,12 +1,9 @@
-.tooltip__container {
+.tooltip {
 
-  display: inline-block;
-  position: relative;
   text-decoration: 2px dotted underline @link;
   text-indent: 0;
   text-underline-offset: 5px;
   transition: all 0.3s ease-in-out;
-  z-index: 9;
 
   &:hover {
 
@@ -18,90 +15,68 @@
       text-decoration-color: @active-tb2;
 
     }
-
   }
+}
 
-  .tooltip {
+.tippy-box[data-theme~='sOS'] {
 
-    background-color: @window;
-    box-shadow: @windowouter, @windowinner;
-    color: @text;
-    visibility: hidden;
-    opacity: .40;
-    min-width: 50px;
-    width: max-content;
-    max-width: 250px;
-    position: absolute;
+  background-color: @window;
+  border-radius: 2px;
+  box-shadow: @windowouter, @windowinner;
+  color: @text;
+  font-family: @font[dos];
+  font-size: 14px;
+  padding: 5px;
+  
+  .sunken-panel {
+
+    margin: 0;
     padding: 10px;
-    top: -140%;
-    left: -25%;
-    border-radius: 2px;
-    font-size: 14px;
-    font-family: @font[dos];
-    transform: translateY(9px);
-    transition: all 0.3s ease-in-out;
-    z-index: 999;
+  
+  }
+}
+
+.tippy-box[data-animation='hoverOS'][data-state='visible'] {
+  
+  animation: hoverOS 1s 
+             ease-in-out 
+             infinite  
+             alternate;
+
+}
+
+.tippy-box[data-theme~='sOS-flag'] .tippy-content {
+
+  background-color: @window;
+  border-radius: 2px;
+  box-shadow: @windowouter, @windowinner;
+  color: @text;
+  font-family: @font[dos];
+  font-size: 12px;
+  padding: 5px;
+  text-align: justify;
+  width: 350px;
+
+  img {
+
+    border: 2px solid @window; 
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 10px;
 
   }
 
-  &:hover .tooltip {
+  .sunken-panel {
 
-    animation: hoverOS 1s 
-                ease-in-out 
-                infinite  
-                alternate;
-    opacity: 1;
-    transform: translateY(-10px);
-    transition: .3s linear;
-    visibility: visible;
+    padding: 10px;
 
-  }
+    b:first-of-type {
 
-  &.top .tooltip { 
-
-    top: -50px; 
-
-  }
-
-  &.left .tooltip { 
-
-    left:-170%; top:-20%; 
-
-  }
-
-  &.left .tooltip::after{
-
-    left:90%;
-    top:40%;
-    transform: rotate(-90deg);
-
-  }
-
-  &.bottom .tooltip { 
-    
-    left:-20%; top:115%; 
-
-  }
-
-  &.bottom .tooltip::after{
-    
-    left:40%;
-    top:-17%;
-    transform: rotate(180deg);
-
-  }
-
-  &.right .tooltip { 
-
-    left:115%; top:-20%; 
-
-  }
-
-  &.right .tooltip::after{
-
-    left:-12%;
-    top:40%;
-    transform: rotate(90deg);
-
+      color: @link;
+      display: block;
+      font-size: 16px;
+      letter-spacing: 4px;
+      
+    }
   }
 }

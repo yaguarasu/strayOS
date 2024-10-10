@@ -226,6 +226,7 @@
     text-align: center;
     text-decoration: none;
     transition: 1s;
+    width: min-content;
 
     div {
 
@@ -362,12 +363,37 @@
 .window {
   &--bios.window--primary {
 
-    top: -35px;
+    top: -20px;
+    left: -50px;
 
+    .window__body {
+      
+      overflow-y: hidden;
+
+      > article {
+
+        height: 100%;
+        padding: 10px;
+        
+      }
+
+      h1 {
+
+        margin-left: -50px;
+
+      }
+
+      .sunken-panel:has(.flag__container) {
+        
+        margin: 32px 64px;
+
+      }
+    }
   }
 
   &--bios.window--secondary {
 
+    display: none;
     left: -10px;
 
   }
@@ -375,14 +401,122 @@
   &--bios.window--avatar {
 
     animation: @floater;
-    left: 450px;
+    height: fit-content;
+    left: -295px;
     position: absolute;
-    top: -72px;
+    top: -40px;
+    width: fit-content;
+    z-index: 1;
+  
+    .window__body {
+  
+      padding: 0 2px 2px 2px;
+  
+    }
+  }
+
+  &--bios.window--ext {
+    
+    height: 270px;
+    left: -350px;
+    position: absolute;
+    top: 180px;
+    width: 340px;
+    z-index: -2;
+
+    .window__body {
+
+      margin-right: 40px;
+
+    }
+  }
+}
+
+.flag__container {
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: inherit;
+
+  > div {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 
   }
 
+  .flag {
+
+    border-radius: 1px;
+    height: fit-content;
+    width: fit-content;
+
+    img {
+
+      border-radius: 2px;
+      margin: 3px;
+
+    }
+  }
 }
 
+.pronouns {
+
+  display: flex;
+  flex-flow: row wrap;
+  height: fit-content;
+  justify-content: center;
+  margin: 0 15px 0 -35px;
+
+}
+
+prns-e {
+
+  color: @link;
+  display: block;
+  font-family: @font[kiwi];
+  font-size: 1rem;
+  margin: 5px 0;
+
+}
+
+prns-e + prns-e::before {
+
+  color: @active-tb2;
+  content: "⛧";
+  font-size: .65rem;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.bios-panel p {
+
+  font-size: 0.565rem;
+
+  b:first-of-type {
+  
+    color: lighten(@sunkentext, 10%);
+  
+  }
+}
+
+.sunken-panel.bios-panel + .sunken-panel p {
+
+  margin: 10px;
+
+}
+
+.desktop--bios {
+
+  left: initial;
+  top: 55px;
+  width: 100px;
+  right: 120px;
+
+}
 
 /*--------------------------------*
  *           /not_found.          *

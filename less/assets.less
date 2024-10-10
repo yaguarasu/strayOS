@@ -73,6 +73,20 @@
     }
   }
 
+  &__hate {
+
+    animation: @floater;
+    left: 525px;
+    top: 140px;
+
+    img {
+      
+      height: auto;
+      width: auto;
+
+    }
+  }
+
   &__ilex {
     
     animation: @floater;
@@ -133,6 +147,7 @@
   &__XXXX {
     
     animation: @floater;
+    display: none;
     left: 80px;
     top: -55px;
     z-index: -2;
@@ -142,6 +157,42 @@
       height: auto;
       width: auto;
 
+    }
+  }
+}
+
+/*--------------------*
+ *      avatars       *
+ *--------------------*/
+.avatars {
+  .manipulated {
+    
+    display: block;
+    transition: 3.5s;
+
+  }
+  
+  .original {
+
+    display: none;
+    transition: 3.5s;
+  
+  }
+
+  &:hover {
+
+    .manipulated {
+      
+      display: none;
+      transition: 3.5s;
+
+    }
+    
+    .original {
+
+      display: block;
+      transition: 3.5s;
+    
     }
   }
 }

@@ -122,46 +122,25 @@
                         <h1>queue.</h1>
                         <div class="sunken-panel">
                           <p>
-                            SYSTEM_BiOS(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                high priority.
-                              </span></span>).<i>CREATE</i>(HARDWARE, COMPONENTS);
+                            SYSTEM_BiOS(<span class="high-priority tooltip">${!}</span>).<i>CREATE</i>(HARDWARE, COMPONENTS);
                           </p>
                           <p>
-                            BLOG(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                medium-high priority.
-                              </span></span>).<i>CREATE</i>;
+                            BLOG(<span class="medium-high-priority tooltip">${!}</span>).<i>CREATE</i>;
                           </p>
                           <p>
-                            LOGS(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                medium priority.
-                              </span></span>).<i>CREATE</i>(JOURNALS);
+                            LOGS(<span class="medium-priority tooltip">${!}</span>).<i>CREATE</i>(JOURNALS);
                           </p>
                           <p>
-                            REPOSITORiES(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                low priority.
-                              </span></span>).<i>CREATE</i>(QUOTES, RESOURCES);
+                            REPOSITORiES(<span class="low-priority tooltip">${!}</span>).<i>CREATE</i>(QUOTES, RESOURCES);
                           </p>
                           <p>
-                            RESPONSiVENESS(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                low priority.
-                              </span></span>).<i>iMPLEMENT</i>;
+                            RESPONSiVENESS(<span class="low-priority tooltip">${!}</span>).<i>iMPLEMENT</i>;
                           </p>
                           <p>
-                            ARCHiVE(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                low priority.
-                              </span></span>).<i>CREATE</i>(MiCROBLOG, CHANGELOG);
+                            ARCHiVE(<span class="low-priority tooltip">${!}</span>).<i>CREATE</i>(MiCROBLOG, CHANGELOG);
                           </p>
                           <p>
-                            iCONS(<span class="tooltip__container top">${!}
-                              <span class="tooltip">
-                                low priority.
-                              </span></span>).<i>ADJUSTCOLOR</i>(START, DESKTOP);
+                            iCONS(<span class="low-priority tooltip">${!}</span>).<i>ADJUSTCOLOR</i>(START, DESKTOP);
                           </p>
                           <p>
                             <s>ATTRiBUTiONS(${!}).<i>CREATE</i>;</s>
@@ -210,7 +189,7 @@
                             <img src="https://nekoweb.org/assets/buttons/button3.gif" alt="button for nekoweb, this machines webhosting site.">
                           </a>
                         </div>
-                        <div>
+                        <div class="corru_observer-button">
                           <a href="https://corru.observer" target="_blank">
                             <img src="/files/graphics/corru.gif" alt="button for corru.observer, a narrative webgame of sorts.">
                           </a>
@@ -223,6 +202,9 @@
                           <a href="https://hillhouse.neocities.org/journal/notes/palestine">
                             <img src="/files/graphics/falasteen.gif" alt="a button gif with the palastinian flag in the background; it is saying: &quot;from the river to the sea, palastine will be free.&quot;">
                           </a>
+                        </div>
+                        <div>
+                          <img src="/files/graphics/handcoded.gif">
                         </div>
                       </div>
 <!-- buttons in relation to other subjects end. --> 
@@ -355,6 +337,23 @@
                     <h1>changelog.</h1>
                     <div class="sunken-panel
                                 briefpost__container">
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
+                            new: /bios.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-10">10oct</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            <b>additions:</b> /bios page; microblog post;<br>
+                            <b>changes:</b> tooltips changed to tippy.js rather than pure CSS.
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
                       <div class="briefpost">
                         <div class="briefpost__head">
                           <div class="briefpost__title">
@@ -540,6 +539,22 @@
                       <div class="briefpost">
                         <div class="briefpost__head">
                           <div class="briefpost__title">
+                            misericordia.
+                          </div>
+                          <div class="briefpost__time">
+                            <time datetime="2024-10-10 16:41">10oct ~3pm</time>
+                          </div>
+                        </div>
+                        <div class="briefpost__body">
+                          <p>
+                            truly suffering due to this body hating to allow itself to get proper rest. not as bad as it was in high school, however, it is unenjoyable nonetheless. having an arthritis flare-up as well, so...
+                          </p>
+                        </div>
+                        <hr>
+                      </div>
+                      <div class="briefpost">
+                        <div class="briefpost__head">
+                          <div class="briefpost__title">
                             optimizations needed.
                           </div>
                           <div class="briefpost__time">
@@ -660,6 +675,9 @@
     </div>
 <!-- page end. -->
 <!-- scripts. -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/files/js/tooltips.js"></script> 
     <script src="/files/js/taskbar.js"></script>
     <script src="/files/js/script.js"></script>
     <script src="/files/js/global.js"></script>

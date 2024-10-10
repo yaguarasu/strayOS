@@ -1,7 +1,14 @@
 ::selection, ::-moz-selection {
 
-  color: @active-tb2;
   background-color: @backdrop;
+  color: @active-tb2;
+
+  .sunken-panel &, .tree-view & {
+
+    background-color: @link;
+    color: @sunken;
+
+  }
 
 }
 
@@ -325,7 +332,7 @@ ul {
   }
  }
 
-.tooltip__container {
+.tooltip {
   &:hover {
 
     cursor: @crs-help;
